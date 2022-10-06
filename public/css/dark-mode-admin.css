@@ -1,0 +1,73 @@
+[data-theme="dark"] {
+    background-color: #111 !important;
+    color: #eee;
+  }
+
+  [data-theme="dark"] .bg-light {
+    background-color: #333 !important;
+  }
+
+  [data-theme="dark"] .bg-white {
+    background-color: #000 !important;
+  }
+
+  /* navbar2 */
+  [data-theme="dark"] .bg-black {
+    background-color: rgb(43, 43, 43) !important;
+  }
+
+  /* texto navbar1 */
+  [data-theme="dark"] .nav-link {
+      color: #eee !important;
+  }
+
+  [data-theme="dark"] .card {
+      background-color: rgb(43, 43, 43) !important;
+  }
+
+  [data-theme="dark"] .table {
+      color: #eee !important;
+  }
+
+  [data-theme="dark"] .btn-black {
+      color: #000 !important;
+      background-color: #eee !important;
+  }
+
+  [data-theme="dark"] td {
+      color: #eee !important;
+  }
+
+  [data-theme="dark"] .dropdown-menu-dark {
+      background-color: rgb(43, 43, 43) !important;
+  }
+
+  [data-theme="dark"] a {
+      color: #eee;
+      text-decoration:none;
+   }
+
+   [data-theme="dark"] .card-header {
+    background-color: #000 !important;
+    color: #eee;
+    text-decoration:none;
+ }
+
+    [data-theme="dark"] .col {
+        background-color: #111 !important;
+        color: #eee;
+        text-decoration:none;
+    }
+
+    [data-theme="dark"] .form-control {
+        background-color: #111 !important;
+        color: #eee;
+        text-decoration:none;
+    }
+
+    [data-theme="dark"] .form-select {
+        background-color: #111 !important;
+        color: #eee;
+        text-decoration:none;
+    }
+

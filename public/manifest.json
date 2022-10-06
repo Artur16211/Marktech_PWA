@@ -1,0 +1,17 @@
+{
+    "name": "Marktech",
+    "short_name": "MARKTECH",
+    "start_url": "/index.php",
+    "background_color": "#FFFFFF",
+    "description": "Marktech",
+    "display": "fullscreen",
+    "theme_color": "#FFFFFF",
+    "icons": [
+        {
+            "src": "logo.PNG",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
