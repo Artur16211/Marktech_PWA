@@ -139,7 +139,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                     <a class="btn btn-link btn-lg" href="/accesorios" id="navbarDropdown" role="button"
-                        aria-haspopup="true" aria-expanded="false">Accesorias <span class="iconify"
+                        aria-haspopup="true" aria-expanded="false">Accesorios <span class="iconify"
                             data-icon="bx:down-arrow"></span></a>
                     {{-- <a class="btn btn-link btn-lg dropdown-toggle" href="/todo" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
