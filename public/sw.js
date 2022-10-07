@@ -11,7 +11,7 @@ self.addEventListener("install", function (event) {
 
 const filesToCache = [
     '/',
-    '/offline.blade.php'
+    '../resources/offline/offline.blade.php'
 ];
 
 const checkResponse = function (request) {
