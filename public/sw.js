@@ -11,10 +11,7 @@ self.addEventListener("install", function (event) {
 
 const filesToCache = [
     '/',
-    '/offline.php',
-    '/css/bootstrap.min.css',
-    '/css/style.css',
-    '/js/bootsrap.min.js',
+    '/offline.php'
 ];
 
 const checkResponse = function (request) {
@@ -41,9 +38,7 @@ const returnFromCache = function (request) {
     return caches.open("offline").then(function (cache) {
         return cache.match(request).then(function (matching) {
             if (!matching || matching.status === 404) {
-                return cache.matchAll().then(function (items) {
-                    'offline.php', 'bootstrap.min.css', 'style.css', 'bootsrap.min.js' in items;
-                });
+                return cache.match("offline.php");
             } else {
                 return matching;
             }
@@ -55,7 +50,7 @@ self.addEventListener("fetch", function (event) {
     event.respondWith(checkResponse(event.request).catch(function () {
         return returnFromCache(event.request);
     }));
-    if (!event.request.url.startsWith('http')) {
+    if(!event.request.url.startsWith('http')){
         event.waitUntil(addToCache(event.request));
     }
 });
