@@ -215,7 +215,7 @@
 
     <!--content-->
     <div class="container my-4">
-        <b>Estas sin Conexión</b>
+        <b>¡Estas sin Conexión!</b>
 
     </div>
 
