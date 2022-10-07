@@ -3,7 +3,7 @@
 
 <head>
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#FF5733">
+    <meta name="theme-color" content="#FFFFFF">
     <!-- Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -11,7 +11,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- PWA  -->
-    <meta name="theme-color" content="#6777ef" />
     <link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <!-- Bootstrap CSS -->
