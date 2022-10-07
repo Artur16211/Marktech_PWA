@@ -38,9 +38,9 @@ const returnFromCache = function (request) {
     return caches.open("offline").then(function (cache) {
         return cache.match(request).then(function (matching) {
             if (!matching || matching.status === 404) {
-                return cache.match("offline.php");
-                return cache.match("css/bootstrap.min.css");
-                return cache.match("js/bootstrap.min.js");
+                return cache.matchAll().then(function (items) {
+                    'offline.php' in items;
+                });
             } else {
                 return matching;
             }
