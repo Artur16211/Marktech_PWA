@@ -44,7 +44,7 @@ const returnFromCache = function (request) {
         return cache.match(request).then(function (matching) {
             if (!matching || matching.status === 404) {
                 return cache.matchAll().then(function (items) {
-                    'offline.php', 'style.css', 'bootstrap.min.css', 'bootstrap.min.js', 'app.js', 'app.css' in items;
+                    'offline.php', 'css/style.css', 'css/bootstrap.min.css', 'js/bootstrap.min.js', 'js/app.js', 'css/app.css' in items;
                 });
             } else {
                 return matching;
