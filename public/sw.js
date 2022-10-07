@@ -14,7 +14,7 @@ const filesToCache = [
     '/offline.php',
     '/css/bootstrap.min.css',
     '/css/style.css',
-    '/js/bootsrap.min.js'
+    '/js/bootsrap.min.js',
 ];
 
 const checkResponse = function (request) {
@@ -42,7 +42,7 @@ const returnFromCache = function (request) {
         return cache.match(request).then(function (matching) {
             if (!matching || matching.status === 404) {
                 return cache.matchAll().then(function (items) {
-                    'offline.php', 'css/bootstrap.min.css', 'css/style.css', 'js/bootsrap.min.js' in items;
+                    'offline.php', 'bootstrap.min.css', 'style.css', 'bootsrap.min.js' in items;
                 });
             } else {
                 return matching;
