@@ -39,7 +39,7 @@ const returnFromCache = function (request) {
         return cache.match(request).then(function (matching) {
             if (!matching || matching.status === 404) {
                 return cache.matchAll().then(function (items) {
-                    'offline.php' in items;
+                    'offline.php', 'css/bootstrap.min.css', 'css/style.css', 'js/bootsrap.min.js' in items;
                 });
             } else {
                 return matching;
