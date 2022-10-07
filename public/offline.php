@@ -7,8 +7,18 @@
     <meta name="title" content="InfyBonus">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-    local bootstrap css
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/chat.min.css">
+    <link rel="stylesheet" href="./css/dark-mode.css">
+    <link rel="stylesheet" href="./css/star-rating.min.css">
+
+    <script src="./js/app.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/dark-mode-switch.min.js"></script>
+    <script src="./js/iconify.min.js"></script>
+    <script src="./js/jquery.star-rating-svg.min.js"></script>
+
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('./img/favicon.ico') }}">
     <title>@yield('title', 'Marktech')</title>
 </head>
