@@ -11,7 +11,12 @@ self.addEventListener("install", function (event) {
 
 const filesToCache = [
     '/',
-    '/offline.php'
+    '/offline.php',
+    '/css/style.css',
+    '/css/bootstrap.min.css',
+    '/js/bootstrap.min.js',
+    '/js/app.js',
+    '/css/app.css',
 ];
 
 const checkResponse = function (request) {
@@ -38,7 +43,9 @@ const returnFromCache = function (request) {
     return caches.open("offline").then(function (cache) {
         return cache.match(request).then(function (matching) {
             if (!matching || matching.status === 404) {
-                return cache.match("offline.php");
+                return cache.matchAll().then(function (items) {
+                    'offline.php', 'style.css', 'bootstrap.min.css', 'bootstrap.min.js', 'app.js', 'app.css' in items;
+                });
             } else {
                 return matching;
             }
@@ -50,7 +57,7 @@ self.addEventListener("fetch", function (event) {
     event.respondWith(checkResponse(event.request).catch(function () {
         return returnFromCache(event.request);
     }));
-    if(!event.request.url.startsWith('http')){
+    if (!event.request.url.startsWith('http')) {
         event.waitUntil(addToCache(event.request));
     }
 });
