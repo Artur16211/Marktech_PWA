@@ -38,12 +38,7 @@ const returnFromCache = function (request) {
     return caches.open("offline").then(function (cache) {
         return cache.match(request).then(function (matching) {
             if (!matching || matching.status === 404) {
-                return cache.addAll([
-                    '/offline.php',
-                    'css/bootstrap.min.css',
-                    'css/style.css',
-                    'js/bootstrap.min.js',
-                ]);
+                return cache.add('offline.php');
             } else {
                 return matching;
             }
