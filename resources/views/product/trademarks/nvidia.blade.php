@@ -3,7 +3,7 @@
 <section id="filters">
     <div class="container position-relative">
         <form method="GET">
-            <<input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
+            <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                 style="width: 300px; height: 50px"><br>
 
                 {!! $viewData['trademark_nvidia']->withQueryString()->links('layouts.pagination') !!}
