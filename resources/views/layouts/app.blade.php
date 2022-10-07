@@ -7,14 +7,11 @@
     <!-- Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <!-- test -->
-    <meta name="apple-touch-fullscreen" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Expo" />
     <!--  -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- PWA  -->
-    <link rel="apple-touch-icon" href="{{ asset('./logo.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/logo.jpg') }}">
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <!-- Bootstrap CSS -->
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
