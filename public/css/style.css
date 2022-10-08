@@ -253,7 +253,7 @@
      align-items: center;
  }
 
- @media(max-width:500px) {
+ @media(max-width:750px) {
 
      .nav-link {
          margin-block: -5%;
@@ -265,19 +265,19 @@
      }
  }
 
- @media(min-width:500px) {
+ @media(min-width:750px) {
      .mobile-nav {
          display: none;
      }
  }
 
- @media(max-width:500px) {
+ @media(max-width:750px) {
      .navbar-black {
          display: none;
      }
  }
 
- @media(max-width:500px) {
+ @media(max-width:750px) {
      .logo-mk {
          margin-left: 50%;
          padding-bottom: 10%;
