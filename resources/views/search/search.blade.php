@@ -245,8 +245,10 @@
                         <div class="col-md-4">
 
                             <a href="{{ route('product.show', ['id' => $product->id]) }}">
+                                <div class="img-card">
                                 <img src="{{ asset('/img/products/' . $product->image) }}" width="200px"
-                                    height="200px" alt="imagen">
+                                    height="200px" alt="imagen" class="card-img-top img-card d-inline mx-auto d-block">
+                                </div>
                             </a>
                         </div>
                         <div class="col-md-8">

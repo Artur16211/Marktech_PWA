@@ -46,6 +46,7 @@
                     </a>
                 </div>
             </div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -76,8 +77,10 @@
                 <div class="card">
                     <a class="hove btn stretched-link"></a>
                     <a href="{{ route('product.show', ['id' => $product->getId()]) }}">
+                        <div class="img-card">
                         <img src="{{ asset('/img/products/' . $product->getImage()) }}"
-                            class="card-img-top img-card d-inline" style="height:20em;">
+                            class="card-img-top img-card d-inline mx-auto d-block" style="height:20em;">
+                        </div>
                     </a>
                     {{-- <div class="card-body text-center"> --}}
                     <div class="card-body">
@@ -143,8 +146,10 @@
             <div class="col-lg-3 mb-3 d-flex align-items-stretch">
                 <div class="card">
                     <a href="{{ route('product.show', ['id' => $product->getId()]) }}">
+                        <div class="img-card">
                         <img src="{{ asset('/img/products/' . $product->getImage()) }}"
-                            class="card-img-top img-card d-inline" style="height:20em;">
+                            class="card-img-top img-card d-inline mx-auto d-block" style="height:20em;">
+                        </div>
                     </a>
                     <div class="card-body">
                         <a href="{{ route('product.show', ['id' => $product->getId()]) }}"><strong>{{ $product->getName() }}</strong>
@@ -238,8 +243,10 @@
             <div class="col-lg-3 mb-3 d-flex align-items-stretch">
                 <div class="card">
                     <a href="{{ route('product.show', ['id' => $product->getId()]) }}">
-                        <img src="{{ asset('/img/products/' . $product->getImage()) }}" class="card-img-top img-card"
+                        <div class="img-card">
+                        <img src="{{ asset('/img/products/' . $product->getImage()) }}" class="card-img-top img-card d-inline mx-auto d-block"
                             style="height:20em; width:20em;">
+                        </div>
                     </a>
                     <div class="card-body">
                         <a href="{{ route('product.show', ['id' => $product->getId()]) }}"><strong>{{ $product->getName() }}</strong>

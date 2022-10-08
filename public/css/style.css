@@ -222,3 +222,33 @@
  #toast-container>div.toast {
      background-image: none !important;
  }
+
+ /* @media(min-width:1200px) {
+    .carousel-inner {
+        width: 10%;
+    }
+} */
+
+ /* carrousel mobile fix */
+
+ @media(max-width:1200px) {
+     .carousel-inner {
+         width: 100%;
+     }
+
+     .carousel-indicators {
+         display: none;
+     }
+ }
+
+ @media(max-width:1200px) {
+     .card {
+         width: 100%;
+     }
+
+ }
+
+ .img-card {
+     width: auto;
+     align-items: center;
+ }
