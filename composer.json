@@ -23,7 +23,7 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.7",
-        "laravel/ui": "^3.4",
+        "laravel/ui": "^4.0",
         "league/omnipay": "^3.2",
         "mtvs/eloquent-hashids": "^3.3",
         "omnipay/paypal": "^3.0",

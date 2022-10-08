@@ -252,3 +252,34 @@
      width: auto;
      align-items: center;
  }
+
+ @media(max-width:500px) {
+
+     .nav-link {
+         margin-block: -5%;
+         margin-left: 25%;
+     }
+
+     .navbar-toggler {
+         display: none;
+     }
+ }
+
+ @media(min-width:500px) {
+     .mobile-nav {
+         display: none;
+     }
+ }
+
+ @media(max-width:500px) {
+     .navbar-black {
+         display: none;
+     }
+ }
+
+ @media(max-width:500px) {
+     .logo-mk {
+         margin-left: 50%;
+         padding-bottom: 10%;
+     }
+ }
