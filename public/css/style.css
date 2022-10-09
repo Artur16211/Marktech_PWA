@@ -298,3 +298,10 @@
          display: none;
      }
  }
+
+ /* hide some mobile elements */
+ @media(min-width:750px) {
+     .hide-desktop {
+         display: none;
+     }
+ }

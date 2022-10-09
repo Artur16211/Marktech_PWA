@@ -358,106 +358,111 @@
 
         </div>
 
-        {{-- <!--chatbot-->
+        <!--chatbot-->
+        <script>
+            if (window.screen.width > 780) {
+                var botmanWidget = {
+                    frameEndpoint: '/chatbot',
+                    title: '',
+                    introMessage: 'Bienvenido al chatbot de Marktech',
+                    placeholderText: 'Escribe aquí tu mensaje',
+                    mainColor: 'black',
+                    aboutText: '',
+                    aboutLink: '',
+                    bubbleAvatarUrl: src = '{!! asset('img/chat.jpg') !!}'
+                };
+            }
+        </script>
+        <script src={{ asset('js/widget.js') }}></script>
 
-    <script>
-        var botmanWidget = {
-            frameEndpoint: '/chatbot',
-            title: '',
-            introMessage: 'Bienvenido al chatbot de Marktech',
-            placeholderText: 'Escribe aquí tu mensaje',
-            mainColor: 'black',
-            aboutText: '',
-            aboutLink: '',
-            bubbleAvatarUrl: src = '{!! asset('img/chat.jpg') !!}'
-        };
-    </script>
-    <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script> --}}
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-        <div class="container-sm">
-            <section>
+        <div class="hide-mobile">
+            <div class="container-sm">
+                <section>
+                    <!--footer-->
+                    <footer class="mt-auto bg-black text-center text-white">
+
+                        <div class="container p-4">
+
+                            <!--Links-->
+                            <section class="">
+
+                                <div class="row">
+
+                                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                        <h5 class="text-uppercase fs-4"><strong>Contacto</strong></h5>
+                                        <br>
+                                        <ul class="list-unstyled mb-0">
+                                            <li>
+                                                <a href="mailto:herrera.alvaradoartu@gmail.com"
+                                                    class="text-white">Contactanos</a>
+                                            </li>
+                                            <li>
+                                                <a href="/Sugerencias" class="text-white">Sugerencias</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                        <h5 class="text-uppercase fs-4"><strong>Nuestras Redes</strong></h5>
+                                        <br>
+                                        <ul class="list-unstyled mb-0">
+                                            <li>
+                                                <a href="https://www.facebook.com/Mark-Tech-100458546063140"><i
+                                                        class="icon iconify text-white"
+                                                        data-icon="ion-social-facebook" data-width="24"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com/MarktechOficial"><i
+                                                        class="icon iconify text-white" data-icon="ion-social-twitter"
+                                                        data-width="24"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://instagram.com/marktech2022"><i
+                                                        class="icon iconify text-white"
+                                                        data-icon="ion-social-instagram" data-width="24"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                        <h5 class="text-uppercase fs-4"><strong>Marktech</strong></h5>
+                                        <br>
+                                        <ul class="list-unstyled mb-0">
+                                            <li>
+                                                <a href="/avisodeprivacidad" class="text-white">Politica de
+                                                    Privacidad</a>
+                                            </li>
+                                            <li>
+                                                <a href="/terminosycondiciones" class="text-white">Terminos y
+                                                    Condiciones</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                        <img src="{{ asset('img/paypalcheckout.png') }}" alt="logo"
+                                            class="img-fluid">
+                                        <img src="{{ asset('img/stripe1.png') }}" alt="logo" class="img-fluid">
+                                    </div>
+
+
+
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <!--Derechos-->
+                        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                            Todos los derechos reservados 2022 ©:
+                            <a class="text-white" href="/">https://Marktech.ml/</a>
+                        </div>
+                    </footer>
+                </section>
                 <!--footer-->
-                <footer class="mt-auto bg-black text-center text-white">
-
-                    <div class="container p-4">
-
-                        <!--Links-->
-                        <section class="">
-
-                            <div class="row">
-
-                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <h5 class="text-uppercase fs-4"><strong>Contacto</strong></h5>
-                                    <br>
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <a href="mailto:herrera.alvaradoartu@gmail.com"
-                                                class="text-white">Contactanos</a>
-                                        </li>
-                                        <li>
-                                            <a href="/Sugerencias" class="text-white">Sugerencias</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <h5 class="text-uppercase fs-4"><strong>Nuestras Redes</strong></h5>
-                                    <br>
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <a href="https://www.facebook.com/Mark-Tech-100458546063140"><i
-                                                    class="icon iconify text-white" data-icon="ion-social-facebook"
-                                                    data-width="24"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://twitter.com/MarktechOficial"><i
-                                                    class="icon iconify text-white" data-icon="ion-social-twitter"
-                                                    data-width="24"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://instagram.com/marktech2022"><i
-                                                    class="icon iconify text-white" data-icon="ion-social-instagram"
-                                                    data-width="24"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <h5 class="text-uppercase fs-4"><strong>Marktech</strong></h5>
-                                    <br>
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <a href="/avisodeprivacidad" class="text-white">Politica de Privacidad</a>
-                                        </li>
-                                        <li>
-                                            <a href="/terminosycondiciones" class="text-white">Terminos y
-                                                Condiciones</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <img src="{{ asset('img/paypalcheckout.png') }}" alt="logo"
-                                        class="img-fluid">
-                                    <img src="{{ asset('img/stripe1.png') }}" alt="logo" class="img-fluid">
-                                </div>
-
-
-
-                            </div>
-
-                        </section>
-                    </div>
-
-                    <!--Derechos-->
-                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                        Todos los derechos reservados 2022 ©:
-                        <a class="text-white" href="/">https://Marktech.ml/</a>
-                    </div>
-                </footer>
-            </section>
-            <!--footer-->
+            </div>
         </div>
         <script src="{{ asset('/sw.js') }}"></script>
         <script>

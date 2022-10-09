@@ -31,10 +31,18 @@
                         href="/pedidos" role="button">></a></div>
             </div>
         </div>
-        <br>
-        <form id="logout" action="{{ route('logout') }}" method="POST">
-            <a role="button" class="btn btn-primary mx-auto d-block" onclick="document.getElementById('logout').submit();">Cerrar Sesión</a>
-            @csrf
-        </form>
+        <div class="hide-desktop">
+            <br>
+            <form id="logout" action="{{ route('logout') }}" method="POST">
+                <a role="button" class="btn btn-primary mx-auto d-block"
+                    onclick="document.getElementById('logout').submit();">Cerrar Sesión</a>
+                @csrf
+            </form>
+            <!--space for bottom navbar-->
+            <div class="container-sm">
+                <div class="p-3 border bg-light text-center fs-4"><strong>bottom navbar</strong></div>
+            </div>
+            <!--space for bottom navbar-->
+        </div>
         <br>
     @endsection
