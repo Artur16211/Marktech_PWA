@@ -18,8 +18,8 @@ $session = \Stripe\Checkout\Session::create([
     ],
     'mode' => 'payment',
     // send success url with order id
-    'success_url' => 'http://localhost:8000/stripe/success/' . $viewData['orders']->getId(),
-    'cancel_url' => 'http://localhost:8000/stripe/cancel',
+    'success_url' => 'https://Marktech.ml/stripe/success/' . $viewData['orders']->getId(),
+    'cancel_url' => 'https://Marktech.ml/stripe/cancel',
 ]);
 ?>
 
@@ -64,49 +64,49 @@ $session = \Stripe\Checkout\Session::create([
                             class="fs-5">{{ $viewData['orders']->getAddress() }}</a><br>
 
                         <div class="hide-mobile">
-                        <table class="table table-borderless table-striped text-center mt-3">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Id único</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">Descuento</th>
-                                    <th scope="col">Cantidad</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($viewData['orders']->getItems() as $item)
+                            <table class="table table-borderless table-striped text-center mt-3">
+                                <thead>
                                     <tr>
-                                        <td>
-                                            <img src="{{ asset('/img/products/' . $item->getProduct()->getImage()) }}"
-                                                alt="{{ $item->getProduct()->getName() }}" class="img-fluid"
-                                                width="100">
-                                        </td>
-                                        <td>
-                                            <a class="link-success"
-                                                href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
-                                                {{ $item->getProduct()->getName() }}
-                                            </a>
-                                        </td>
-                                        <td>{{ $item->getId() }}</td>
-                                        <td>
-                                            <x-money amount="{{ $item->getPrice() }}" currency="MXN" convert />
-                                        </td>
-                                        @if ([$item->getDiscountedprice()] > 0)
-                                            <td class="text-decoration-line-through">-
-                                                <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN"
-                                                    convert />
-                                            </td>
-                                        @else
-                                            <td></td>
-                                        @endif
-                                        <td>{{ $item->getQuantity() }}</td>
-
+                                        <th scope="col"></th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Id único</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Descuento</th>
+                                        <th scope="col">Cantidad</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach ($viewData['orders']->getItems() as $item)
+                                        <tr>
+                                            <td>
+                                                <img src="{{ asset('/img/products/' . $item->getProduct()->getImage()) }}"
+                                                    alt="{{ $item->getProduct()->getName() }}" class="img-fluid"
+                                                    width="100">
+                                            </td>
+                                            <td>
+                                                <a class="link-success"
+                                                    href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
+                                                    {{ $item->getProduct()->getName() }}
+                                                </a>
+                                            </td>
+                                            <td>{{ $item->getId() }}</td>
+                                            <td>
+                                                <x-money amount="{{ $item->getPrice() }}" currency="MXN" convert />
+                                            </td>
+                                            @if ([$item->getDiscountedprice()] > 0)
+                                                <td class="text-decoration-line-through">-
+                                                    <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN"
+                                                        convert />
+                                                </td>
+                                            @else
+                                                <td></td>
+                                            @endif
+                                            <td>{{ $item->getQuantity() }}</td>
+
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                         <div class="hide-desktop">
                             <table class="table table-borderless table-striped text-center mt-3">
@@ -166,7 +166,7 @@ $session = \Stripe\Checkout\Session::create([
                                 </tbody>
                             </table>
                             <br>
-                            </div>
+                        </div>
                         <br>
                         @if ($viewData['orders']->getState() == 'No Pagado')
                             <p class="text-center fs-3"><strong>Escoge un método de pago:<strong></p>
@@ -196,15 +196,16 @@ $session = \Stripe\Checkout\Session::create([
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
                                             <span class="iconify" data-icon="logos:paypal" data-width="32"
                                                 style="margin-right:18px"></span>
                                             <strong>PayPal</strong>
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                        data-bs-parent="#accordionExample">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <form
                                                 action="{{ route('complete.order', ['id' => $viewData['orders']->getId()]) }}"
