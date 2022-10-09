@@ -7,13 +7,13 @@
                     style="width: 300px; height: 50px"><br>
 
 
-                <div class="hide-mobile">
-                    {!! $viewData['products_computadoras']->withQueryString()->links('layouts.pagination') !!}
-                </div>
+                    <div class="hide-mobile">
+                        {!! $viewData['products_computadoras']->withQueryString()->links('layouts.pagination') !!}
+                    </div>
 
-                <div class="hide-desktop mobile-pagination">
-                    {!! $viewData['products_computadoras']->withQueryString()->links('layouts.paginationm') !!}
-                </div>
+                    <div class="hide-desktop mobile-pagination">
+                        {!! $viewData['products_computadoras']->withQueryString()->links('layouts.paginationm') !!}
+                    </div>
 
                 <div class="position-absolute top-0 start-0">
                     {{-- sort select --}}
