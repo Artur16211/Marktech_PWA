@@ -305,3 +305,8 @@
          display: none;
      }
  }
+
+.mobile-pagination{
+    margin-left: 20%;
+    /* text-align: center; */
+}

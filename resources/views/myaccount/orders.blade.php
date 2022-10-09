@@ -3,7 +3,13 @@
 @section('subtitle', $viewData['subtitle'])
 @section('content')
 
-    {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+    <div class="hide-mobile">
+        {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+    </div>
+
+    <div class="hide-desktop mobile-pagination">
+        {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
+    </div>
 
     @forelse ($viewData["orders"] as $order)
         <div class="card mb-4">
