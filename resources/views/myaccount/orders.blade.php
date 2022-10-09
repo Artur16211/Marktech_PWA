@@ -127,5 +127,11 @@
         </div>
     @endforelse
 
-    {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
+    <div class="hide-mobile">
+        {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+    </div>
+
+    <div class="hide-desktop mobile-pagination">
+        {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
+    </div>
 @endsection
