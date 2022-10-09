@@ -2795,7 +2795,7 @@ class ProductController extends Controller
         $viewData['title'] = 'Marktech';
         $viewData['subtitle'] = 'Productos';
 
-        $viewData['products_motherboard'] = Product::where('subcategory', '=', 'Targetas Madre')->paginate(12);
+        $viewData['products_motherboard'] = Product::where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
 
         $trademark = Request::get('trademark');
 
@@ -2826,45 +2826,45 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
                 }
                 break;
@@ -2872,46 +2872,46 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
 
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
                 }
                 break;
@@ -2919,46 +2919,46 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
 
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
                 }
                 break;
@@ -2966,46 +2966,46 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('trademark', '=', $trademark)->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('trademark', '=', $trademark)->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
 
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
                 }
                 break;
@@ -3013,46 +3013,46 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('trademark', '=', $trademark)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('trademark', '=', $trademark)->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
 
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas Madre')->paginate(12);
+                        $viewData['products_motherboard'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas Madre')->paginate(12);
                         break;
                 }
                 break;
@@ -3620,7 +3620,7 @@ class ProductController extends Controller
         $viewData['title'] = 'Marktech';
         $viewData['subtitle'] = 'Productos';
 
-        $viewData['products_gpu'] = Product::where('subcategory', '=', 'Targetas de Video')->paginate(12);
+        $viewData['products_gpu'] = Product::where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
 
         $trademark = Request::get('trademark');
 
@@ -3651,45 +3651,45 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('name')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
                 }
                 break;
@@ -3697,46 +3697,46 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
 
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
                 }
                 break;
@@ -3744,46 +3744,46 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
 
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('price')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
                 }
                 break;
@@ -3791,46 +3791,46 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('trademark', '=', $trademark)->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('trademark', '=', $trademark)->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
 
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderbyDesc('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
                 }
                 break;
@@ -3838,46 +3838,46 @@ class ProductController extends Controller
                 switch ($trademark) {
                     // trademark && price
                     case $trademark != 'all' && $price != 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case $trademark != 'all' && $price != 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->where('price', '>', 5000)->paginate(12);
                         break;
                     // base
                     case $trademark != 'all' && $price = 'all':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('trademark', '=', $trademark)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('trademark', '=', $trademark)->paginate(12);
                         break;
                     case 'all' && $price == 'all':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
 
                     // case all && $price
                     case 'all' && $price == '1000-2000':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 1000)->where('price', '<', 2000)->paginate(12);
                         break;
                     case 'all' && $price == '2000-3000':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 2000)->where('price', '<', 3000)->paginate(12);
                         break;
                     case 'all' && $price == '3000-4000':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 3000)->where('price', '<', 4000)->paginate(12);
                         break;
                     case 'all' && $price == '4000-5000':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 4000)->where('price', '<', 5000)->paginate(12);
                         break;
                     case 'all' && $price == '5000-...':
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->where('price', '>', 5000)->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->where('price', '>', 5000)->paginate(12);
                         break;
                     default:
-                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Targetas de Video')->paginate(12);
+                        $viewData['products_gpu'] = Product::orderby('trademark')->where('name', 'LIKE', '%'.$barra.'%')->where('subcategory', '=', 'Tarjetas de Video')->paginate(12);
                         break;
                 }
                 break;
