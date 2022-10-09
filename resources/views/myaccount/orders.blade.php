@@ -127,5 +127,5 @@
         </div>
     @endforelse
 
-    {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+    {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
 @endsection
