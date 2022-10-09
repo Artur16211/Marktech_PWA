@@ -47,7 +47,8 @@
                 </a>
                 <a href="/misdatos" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1"><span class="iconify" data-icon="carbon:delivery-truck" style="font-size: 32px;"></span></h5>
+                        <h5 class="mb-1"><span class="iconify" data-icon="carbon:delivery-truck"
+                                style="font-size: 32px;"></span></h5>
                         <small class="text-muted"><span class="iconify" data-icon="bi:arrow-right-circle"
                                 style="font-size: 32px;"></span></small>
                     </div>
