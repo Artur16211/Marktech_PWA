@@ -109,48 +109,39 @@ $session = \Stripe\Checkout\Session::create([
                             </table>
                         </div>
                         <div class="hide-desktop">
-                            <table class="table table-borderless table-striped text-center mt-3">
+                            <table class="table table-borderless table-striped text-center">
                                 <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Id único</th>
-                                    </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($viewData['orders']->getItems() as $item)
                                         <tr>
+                                            <th scope="row"></th>
                                             <td>
                                                 <img src="{{ asset('/img/products/' . $item->getProduct()->getImage()) }}"
                                                     alt="{{ $item->getProduct()->getName() }}" class="img-fluid"
                                                     width="100">
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Nombre</th>
                                             <td>
                                                 <a class="link-success"
                                                     href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
                                                     {{ $item->getProduct()->getName() }}
                                                 </a>
                                             </td>
-                                            <td>{{ $item->getId() }}</td>
-
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                            <table class="table table-borderless table-striped text-center mt-3">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Precio</th>
-                                        <th scope="col">Descuento</th>
-                                        <th scope="col">Cantidad</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($viewData['orders']->getItems() as $item)
                                         <tr>
+                                            <th scope="row">Código de Producto</th>
+                                            <td>{{ $item->getId() }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Precio</th>
                                             <td>
                                                 <x-money amount="{{ $item->getPrice() }}" currency="MXN" convert />
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Descuento</th>
                                             @if ([$item->getDiscountedprice()] > 0)
                                                 <td class="text-decoration-line-through">-
                                                     <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN"
@@ -159,13 +150,14 @@ $session = \Stripe\Checkout\Session::create([
                                             @else
                                                 <td></td>
                                             @endif
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Cantidad</th>
                                             <td>{{ $item->getQuantity() }}</td>
-
                                         </tr>
                                     @endforeach
                                 </tbody>
                             </table>
-                            <br>
                         </div>
                         <br>
                         @if ($viewData['orders']->getState() == 'No Pagado')
