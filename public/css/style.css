@@ -280,9 +280,9 @@
 
  @media(max-width:750px) {
      .logo-mk {
-         margin-left: 20%;
+         margin-left: 50%;
          padding-bottom: 5%;
-         width: 60%;
+         width: 100%;
      }
  }
 
@@ -290,10 +290,6 @@
      .hide-mobile {
          display: none;
      }
- }
-
- .logo-mk {
-
  }
 
 /* .input-group{
