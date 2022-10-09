@@ -20,6 +20,7 @@
                 <div class="accordion-body">
 
                     <p class="h3 text-center" href="/hardware"><strong>Arma tu computadora</strong></a><br>
+                        <hr class="hr" />
                         <a class="h4" href="/hardware/procesadores">Procesadores</a><br>
                         <a class="h4" href="/hardware\motherboards">Tarjetas Madre</a><br>
                         <a class="h4" href="/hardware\gabinetes">Gabinetes</a><br>
@@ -29,6 +30,7 @@
                         <a class="h4" href="/hardware\fuentes">Fuentes de Poder</a><br>
                         <br>
                     <p class="h3 text-center" href="/hardware"><strong>Almacenamiento</strong></a><br>
+                        <hr class="hr" />
                         <a class="h4" href="/hardware\ssd">Unidades de Estado Solido</a><br>
                         <a class="h4" href="/hardware\hdd">Discos Duros</a><br>
                         <a class="h4" href="/hardware\ram">Memorias RAM</a><br>
@@ -49,6 +51,7 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                     <p class="h3 text-center" href="/hardware"><strong>Accesorios</strong></a><br>
+                        <hr class="hr" />
                         <a class="h4" href="/accesorios\audifonos">Audifonos</a><br>
                         <a class="h4" href="/accesorios\alfombrillas">Alfombrillas</a><br>
                         <a class="h4" href="/accesorios\mouse">Mouse</a><br>
@@ -68,6 +71,7 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                     <p class="h3 text-center" href="/hardware"><strong>Computadoras</strong></a><br>
+                        <hr class="hr" />
                         <a class="h4" href="/computadoras\laptop">Laptop</a><br>
                         <a class="h4" href="/computadoras\escritorio">Escritorio</a><br>
                 </div>
@@ -85,6 +89,7 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                     <p class="h3 text-center" href="/hardware"><strong>Electrónica</strong></a><br>
+                        <hr class="hr" />
                         <a class="h4" href="/electronica\consolas">Consolas</a><br>
                         <a class="h4" href="/electronica\tv">Televisores</a><br>
                         <a class="h4" href="/electronica\monitores">Monitores</a><br>
