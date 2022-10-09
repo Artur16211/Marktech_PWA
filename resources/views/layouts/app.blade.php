@@ -327,19 +327,24 @@
                 <div class="container-fluid">
                     <div class="navbar-nav flex-row">
                         <a class="nav-link" href="/"><span class="iconify"
-                                data-icon="ant-design:home-outlined" style="font-size: 42px;"></span></a>
-                        <a class="nav-link" href="/"><span class="iconify"
-                                data-icon="carbon:collapse-categories" style="font-size: 42px;"></span></a>
+                                data-icon="ant-design:home-outlined" style="font-size: 42px;"></span>Inicio</a>
+                        <a class="nav-link" href="/categoriesm"><span class="iconify"
+                                data-icon="carbon:collapse-categories" style="font-size: 42px;"></span>Categorias</a>
+
+                        <!-- account or login -->
                         @if (!Auth::guest())
                             <a class="nav-link" href="/micuenta"><span class="iconify" data-icon="bx:user"
-                                    style="font-size: 42px;"></span></a>
+                                    style="font-size: 42px;"></span>Yo</a>
                         @else
                             <a class="nav-link" href="/IniciarSesion"><span class="iconify" data-icon="bx:user"
-                                    style="font-size: 42px;"></span></a>
+                                    style="font-size: 42px;"></span>Yo</a>
                         @endif
-                        <a class="nav-link" href="/TuCarrito"><span class="iconify"
-                                data-icon="eva:shopping-cart-outline" style="font-size: 42px;"></span></a>
+                        <!--account or login/-->
 
+                        <a class="nav-link" href="/TuCarrito"><span class="iconify"
+                                data-icon="eva:shopping-cart-outline" style="font-size: 42px;"></span>Carrito</a>
+                        <a class="nav-link" href="/settingsm"><span class="iconify"
+                                data-icon="clarity:settings-line" style="font-size: 42px;"></span>Ajustes</a>
                     </div>
                 </div>
             </nav>

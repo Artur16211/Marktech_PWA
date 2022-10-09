@@ -253,12 +253,15 @@
      align-items: center;
  }
 
+ /* mobile navbar */
+
  @media(max-width:750px) {
 
      .nav-link {
-         margin-block: -5%;
-         margin-left: 25%;
+         margin-block: -3%;
+         /* margin-left: 15%; */
          margin-bottom: 5%;
+         text-align: center;
      }
 
      .navbar-toggler {
@@ -278,6 +281,8 @@
      }
  }
 
+ /*  */
+
  @media(max-width:750px) {
      .logo-mk {
          margin-left: 50%;
@@ -286,12 +291,10 @@
      }
  }
 
+ /* hide some desktop elements */
+
  @media(max-width:750px) {
      .hide-mobile {
          display: none;
      }
  }
-
-/* .input-group{
-    padding-top: 5px;
-} */
