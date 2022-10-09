@@ -338,6 +338,7 @@
         </div>
 
         <!-- Bottom fixed navbar bootstrap -->
+        <div class="hide-desktop">
         <div class="mobile-nav">
             <nav class="navbar navbar-light bg-light fixed-bottom">
                 <div class="container-fluid">
@@ -364,6 +365,7 @@
                     </div>
                 </div>
             </nav>
+        </div>
         </div>
         <!-- Bottom fixed navbar bootstrap -->
 

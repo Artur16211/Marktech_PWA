@@ -121,7 +121,7 @@
     <section id="filters-mobile">
         <div class="container position-relative">
             <form method="GET">
-                <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar productos..."
+                <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                     style="width: 300px; height: 50px"><br>
 
                 {!! $details->render('layouts.pagination') !!}
