@@ -33,6 +33,7 @@
         })
     </script>
 
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dark-mode.css') }}" rel="stylesheet">
@@ -337,35 +338,37 @@
             </nav>
         </div>
 
+
         <!-- Bottom fixed navbar bootstrap -->
         <div class="hide-desktop">
-        <div class="mobile-nav">
-            <nav class="navbar navbar-light bg-light fixed-bottom">
-                <div class="container-fluid">
-                    <div class="navbar-nav flex-row">
-                        <a class="nav-link" href="/"><span class="iconify"
-                                data-icon="ant-design:home-outlined" style="font-size: 42px;"></span>Inicio</a>
-                        <a class="nav-link" href="/categoriesm"><span class="iconify"
-                                data-icon="carbon:collapse-categories" style="font-size: 42px;"></span>Categorías</a>
+            <div class="mobile-nav">
+                <nav class="navbar navbar-light bg-light fixed-bottom">
+                    <div class="container-fluid">
+                        <div class="navbar-nav flex-row">
+                            <a class="nav-link" href="/"><span class="iconify"
+                                    data-icon="ant-design:home-outlined" style="font-size: 42px;"></span>Inicio</a>
+                            <a class="nav-link" href="/categoriesm"><span class="iconify"
+                                    data-icon="carbon:collapse-categories"
+                                    style="font-size: 42px;"></span>Categorías</a>
 
-                        <!-- account or login -->
-                        @if (!Auth::guest())
-                            <a class="nav-link" href="/micuenta"><span class="iconify" data-icon="bx:user"
-                                    style="font-size: 42px;"></span>Yo</a>
-                        @else
-                            <a class="nav-link" href="/IniciarSesion"><span class="iconify" data-icon="bx:user"
-                                    style="font-size: 42px;"></span>Yo</a>
-                        @endif
-                        <!--account or login/-->
+                            <!-- account or login -->
+                            @if (!Auth::guest())
+                                <a class="nav-link" href="/micuenta"><span class="iconify" data-icon="bx:user"
+                                        style="font-size: 42px;"></span>Yo</a>
+                            @else
+                                <a class="nav-link" href="/IniciarSesion"><span class="iconify" data-icon="bx:user"
+                                        style="font-size: 42px;"></span>Yo</a>
+                            @endif
+                            <!--account or login/-->
 
-                        <a class="nav-link" href="/TuCarrito"><span class="iconify"
-                                data-icon="eva:shopping-cart-outline" style="font-size: 42px;"></span>Carrito</a>
-                        <a class="nav-link" href="/settingsm"><span class="iconify"
-                                data-icon="clarity:settings-line" style="font-size: 42px;"></span>Ajustes</a>
+                            <a class="nav-link" href="/TuCarrito"><span class="iconify"
+                                    data-icon="eva:shopping-cart-outline" style="font-size: 42px;"></span>Carrito</a>
+                            <a class="nav-link" href="/settingsm"><span class="iconify"
+                                    data-icon="clarity:settings-line" style="font-size: 42px;"></span>Ajustes</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </div>
+                </nav>
+            </div>
         </div>
         <!-- Bottom fixed navbar bootstrap -->
 
@@ -375,6 +378,8 @@
             @yield('content')
 
         </div>
+
+
 
         <!--chatbot-->
         <script>
@@ -491,6 +496,7 @@
                 });
             }
         </script>
+
 </body>
 
 
