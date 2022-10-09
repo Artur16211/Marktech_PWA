@@ -79,17 +79,19 @@
         </div>
     </div>
 </div>
-<br>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-grid gap-2">
-                        <a class="text-center">¿No tienes una cuenta?</a>
-                        <button type="button" class="btn btn-dark">
-                            <a href="/Registro" class="text-white">Registrarse</a>
-                        </button>
+<div class="hide-desktop">
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a class="text-center">¿No tienes una cuenta?</a>
+                            <button type="button" class="btn btn-dark">
+                                <a href="/Registro" class="text-white">Registrarse</a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
