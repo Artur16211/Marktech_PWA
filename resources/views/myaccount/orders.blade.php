@@ -65,7 +65,7 @@
                                             alt="{{ $item->getProduct()->getName() }}" class="img-fluid" width="100">
                                     </td>
                                     <td>
-                                        <a class="link-success"
+                                        <a class="link-primary"
                                             href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
                                             {{ $item->getProduct()->getName() }}
                                         </a>
@@ -106,7 +106,7 @@
                                             alt="{{ $item->getProduct()->getName() }}" class="img-fluid" width="100">
                                     </td>
                                     <td>
-                                        <a class="link-success"
+                                        <a class="link-primary"
                                             href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
                                             {{ $item->getProduct()->getName() }}
                                         </a>

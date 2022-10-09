@@ -84,7 +84,7 @@ $session = \Stripe\Checkout\Session::create([
                                                     width="100">
                                             </td>
                                             <td>
-                                                <a class="link-success"
+                                                <a class="link-primary"
                                                     href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
                                                     {{ $item->getProduct()->getName() }}
                                                 </a>
@@ -125,7 +125,7 @@ $session = \Stripe\Checkout\Session::create([
                                         <tr>
                                             <th scope="row">Nombre</th>
                                             <td>
-                                                <a class="link-success"
+                                                <a class="link-primary"
                                                     href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
                                                     {{ $item->getProduct()->getName() }}
                                                 </a>
