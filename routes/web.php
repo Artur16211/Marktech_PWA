@@ -200,3 +200,13 @@ Route::get('/settingsm', function () {
 Route::get('/categoriesm', function () {
     return view('mobile.categoriesm');
 });
+#settings
+Route::get('/aboutm', function () {
+    return view('mobile.settings.about');
+});
+Route::get('/helpm', function () {
+    return view('mobile.settings.help');
+});
+Route::get('/theme', function () {
+    return view('mobile.settings.theme');
+});
