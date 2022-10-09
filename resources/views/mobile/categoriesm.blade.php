@@ -26,6 +26,7 @@
                     <a href="/hardware\ram">Memorias RAM</a><br>
                     <a href="/hardware\disipadores">Disipadores</a><br>
                     <a href="/hardware\fuentes">Fuentes de Poder</a><br>
+                    <br>
                     <a href="/hardware"><strong>Almacenamiento</strong></a><br>
                     <a href="/hardware\ssd">Unidades de Estado Solido</a><br>
                     <a href="/hardware\hdd">Discos Duros</a><br>
