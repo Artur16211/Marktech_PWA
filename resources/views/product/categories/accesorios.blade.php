@@ -6,7 +6,14 @@
                 <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                     style="width: 300px; height: 50px"><br>
 
-                {!! $viewData['products_accesorios']->withQueryString()->links('layouts.pagination') !!}
+
+                <div class="hide-mobile">
+                    {!! $viewData['products_accesorios']->withQueryString()->links('layouts.pagination') !!}
+                </div>
+
+                <div class="hide-desktop mobile-pagination">
+                    {!! $viewData['products_accesorios']->withQueryString()->links('layouts.paginationm') !!}
+                </div>
 
                 <div class="position-absolute top-0 start-0">
                     {{-- sort select --}}
@@ -281,5 +288,11 @@
         @endforeach
     @endif
 
-    {!! $viewData['products_accesorios']->withQueryString()->links('layouts.pagination') !!}
+    <div class="hide-mobile">
+        {!! $viewData['products_accesorios']->withQueryString()->links('layouts.pagination') !!}
+    </div>
+
+    <div class="hide-desktop mobile-pagination">
+        {!! $viewData['products_accesorios']->withQueryString()->links('layouts.paginationm') !!}
+    </div>
 @endsection
