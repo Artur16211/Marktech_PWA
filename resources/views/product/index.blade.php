@@ -3,10 +3,9 @@
     <div class="hide-mobile">
         <br>
     </div>
-    {{-- <div class="container">
-    <img src="{!! asset('...') !!}" alt="Responsive image">
-</div> --}}
-    <!--Carrusel-->
+
+
+
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
             <div class="carousel-indicators">

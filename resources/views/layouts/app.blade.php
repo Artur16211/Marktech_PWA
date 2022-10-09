@@ -16,7 +16,23 @@
     <!-- Bootstrap CSS -->
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/dark-mode-switch.min.js') }}" defer></script>
+    <!-- check if the dark mode is enabled -->
+    <script>
+        if (localStorage.getItem('darkSwitch') !== null) {
+            if (localStorage.getItem('darkSwitch') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
+        // check if the user has a preference
+        var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        darkQuery.addListener(function (e) {
+            var newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme)
+        })
+    </script>
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dark-mode.css') }}" rel="stylesheet">
@@ -188,11 +204,11 @@
 
 
                             </div>
-                            <div class="form-check
+                            {{-- <div class="form-check
                                 form-switch">
                                 <input type="checkbox" class="form-check-input" id="darkSwitch" />
                                 <label class="custom-control-label" for="darkSwitch">Modo Oscuro</label>
-                            </div>
+                            </div> --}}
                         </div>
 
 
@@ -377,6 +393,7 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src={{ asset('js/dark-mode-switch.js') }}></script>
 
         <div class="hide-mobile">
             <div class="container-sm">

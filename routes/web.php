@@ -210,3 +210,6 @@ Route::get('/helpm', function () {
 Route::get('/theme', function () {
     return view('mobile.settings.theme');
 });
+Route::get('/languagem', function () {
+    return view('mobile.settings.language');
+});
