@@ -202,8 +202,9 @@
 
             <!--Navbar-->
             </nav>
-
-            <br>
+            <div class="hide-mobile">
+                <br>
+            </div>
             <div class="navbar-black">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-black rounded">
 
@@ -325,14 +326,19 @@
             <nav class="navbar navbar-light bg-light fixed-bottom">
                 <div class="container-fluid">
                     <div class="navbar-nav flex-row">
-                        <a class="nav-link" href="/"><span class="iconify" data-icon="ant-design:home-outlined" style="font-size: 42px;"></span></a>
-                        <a class="nav-link" href="/"><span class="iconify" data-icon="carbon:collapse-categories" style="font-size: 42px;"></span></a>
+                        <a class="nav-link" href="/"><span class="iconify"
+                                data-icon="ant-design:home-outlined" style="font-size: 42px;"></span></a>
+                        <a class="nav-link" href="/"><span class="iconify"
+                                data-icon="carbon:collapse-categories" style="font-size: 42px;"></span></a>
                         @if (!Auth::guest())
-                        <a class="nav-link" href="/micuenta"><span class="iconify" data-icon="bx:user" style="font-size: 42px;"></span></a>
+                            <a class="nav-link" href="/micuenta"><span class="iconify" data-icon="bx:user"
+                                    style="font-size: 42px;"></span></a>
                         @else
-                        <a class="nav-link" href="/IniciarSesion"><span class="iconify" data-icon="bx:user" style="font-size: 42px;"></span></a>
+                            <a class="nav-link" href="/IniciarSesion"><span class="iconify" data-icon="bx:user"
+                                    style="font-size: 42px;"></span></a>
                         @endif
-                        <a class="nav-link" href="/TuCarrito"><span class="iconify" data-icon="eva:shopping-cart-outline" style="font-size: 42px;"></span></a>
+                        <a class="nav-link" href="/TuCarrito"><span class="iconify"
+                                data-icon="eva:shopping-cart-outline" style="font-size: 42px;"></span></a>
 
                     </div>
                 </div>

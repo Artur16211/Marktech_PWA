@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
+<div class="hide-mobile">
     <br>
+</div>
     {{-- <div class="container">
     <img src="{!! asset('...') !!}" alt="Responsive image">
 </div> --}}

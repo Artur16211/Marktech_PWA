@@ -284,3 +284,9 @@
          padding-bottom: 10%;
      }
  }
+
+ @media(max-width:750px) {
+     .hide-mobile {
+         display: none;
+     }
+ }
