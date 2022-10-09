@@ -310,3 +310,13 @@
      margin-left: 20%;
      /* text-align: center; */
  }
+
+ .alert-info {
+     color: #ffffff;
+     background-color: #007fff;
+     border-color: #007fff;
+ }
+
+ .link-info {
+     color: #007fff;
+ }
