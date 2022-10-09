@@ -6,13 +6,7 @@
                 <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                     style="width: 300px; height: 50px"><br>
 
-                <div class="hide-mobile">
-                    {!! $viewData['products_hardware']->withQueryString()->links('layouts.pagination') !!}
-                </div>
-
-                <div class="hide-desktop mobile-pagination">
-                    {!! $viewData['products_hardware']->withQueryString()->links('layouts.paginationm') !!}
-                </div>
+                <!--pagination?-->
 
                 <div class="position-absolute top-0 start-0">
                     {{-- sort select --}}
@@ -116,7 +110,13 @@
                 <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                     style="width: 300px; height: 50px"><br>
 
-                {!! $viewData['products_hardware']->withQueryString()->links('layouts.pagination') !!}
+                <div class="hide-mobile">
+                    {!! $viewData['products_hardware']->withQueryString()->links('layouts.pagination') !!}
+                </div>
+
+                <div class="hide-desktop mobile-pagination">
+                    {!! $viewData['products_hardware']->withQueryString()->links('layouts.paginationm') !!}
+                </div>
 
                 <div class="top-0 start-0">
                     {{-- sort select --}}
