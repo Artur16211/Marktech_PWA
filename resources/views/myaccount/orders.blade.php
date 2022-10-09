@@ -3,7 +3,7 @@
 @section('subtitle', $viewData['subtitle'])
 @section('content')
 
-    <div class="hide-mobile">
+            <div class="hide-mobile">
         {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
     </div>
 
@@ -128,7 +128,13 @@
     @endforelse
 
     <div class="hide-mobile">
+            <div class="hide-mobile">
         {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+    </div>
+
+    <div class="hide-desktop mobile-pagination">
+        {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
+    </div>
     </div>
 
     <div class="hide-desktop mobile-pagination">

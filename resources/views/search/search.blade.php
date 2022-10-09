@@ -8,7 +8,13 @@
                     style="width: 300px; height: 50px"><br>
 
                 <div class="hide-mobile">
-                    {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+                    <div class="hide-mobile">
+                        {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+                    </div>
+
+                    <div class="hide-desktop mobile-pagination">
+                        {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
+                    </div>
                 </div>
 
                 <div class="hide-desktop mobile-pagination">
@@ -130,7 +136,14 @@
                 <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                     style="width: 300px; height: 50px"><br>
 
-                {!! $details->render('layouts.pagination') !!}
+
+                <div class="hide-mobile">
+                    {!! $details->render('layouts.pagination') !!}
+                </div>
+
+                <div class="hide-desktop mobile-pagination">
+                    {!! $details->render('layouts.paginationm') !!}
+                </div>
 
                 <div class="top-0 start-0">
                     {{-- sort select --}}
@@ -315,11 +328,11 @@
     @endif
 
     <div class="hide-mobile">
-        {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+        {!! $details->render('layouts.pagination') !!}
     </div>
 
     <div class="hide-desktop mobile-pagination">
-        {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
+        {!! $details->render('layouts.paginationm') !!}
     </div>
 
 @endsection
