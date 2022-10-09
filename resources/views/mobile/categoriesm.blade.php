@@ -1,5 +1,11 @@
 @extends('layouts.app')
 @section('content')
+<figure class="text-center">
+    <blockquote class="blockquote">
+        <p class="h1"><strong>CATEGORÍAS</strong></p>
+    </blockquote>
+</figure>
+
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
