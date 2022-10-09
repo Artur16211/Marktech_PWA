@@ -307,7 +307,7 @@
 
     {{-- message no products found --}}
     <div class="container">
-        <div class="alert alert-danger mx-auto" role="alert" style="width:40%;">
+        <div class="alert alert-info mx-auto" role="alert" style="width:40%;">
             No se encontraron productos con los criterios de búsqueda.
         </div>
 
