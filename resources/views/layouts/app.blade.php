@@ -27,7 +27,7 @@
         }
         // check if the user has a preference
         var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        darkQuery.addListener(function (e) {
+        darkQuery.addListener(function(e) {
             var newTheme = e.matches ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', newTheme)
         })
@@ -393,7 +393,7 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-            <script src={{ asset('js/dark-mode-switch.js') }}></script>
+        <script src={{ asset('js/dark-mode-switch.js') }}></script>
 
         <div class="hide-mobile">
             <div class="container-sm">
