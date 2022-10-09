@@ -30,83 +30,96 @@
                 </form>
                 <br>
                 {{-- checkboxs --}}
-                <div class="accordion accordion-flush" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <strong>Fabricante</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-
-                                @foreach ($viewData['trademarks'] as $menus)
-                                    <div class="form-check">
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <strong>Fabricante</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{-- <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="trademark"
-                                            value="toshiba" id="flexCheckDefault">
+                                            value="all" id="flexCheckChecked" checked>
                                         <label class="form-check-label" for="flexCheckChecked">
-                                            <input class="form-check-input" type="checkbox" name="trademark"
-                                                value="{{ $menus->trademarks }}" id="flexCheckChecked">
-                                            {{ $menus->trademarks }}
+                                            Todos
                                         </label>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                {{-- checkboxs --}}
-                <div class="accordion accordion-flush" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                <strong>Precio</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse show"
-                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="1000-2000" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        1000 - 2000
-                                    </label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="2000-3000" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        2000 - 3000
-                                    </label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="3000-4000" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        3000 - 4000
-                                    </label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="4000-5000" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        4000 - 5000
-                                    </label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="5000-..." id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        5000 - ...
-                                    </label>
-
+                                    </div><br> --}}
+                                    @foreach ($viewData['trademarks'] as $menus)
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="trademark"
+                                                value="toshiba" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" name="trademark"
+                                                    value="{{ $menus->trademarks }}" id="flexCheckChecked">
+                                                {{ $menus->trademarks }}
+                                            </label>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <br>
+                    {{-- checkboxs --}}
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <strong>Precio</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{-- <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="price"
+                                            value="all" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Todos
+                                        </label>
+                                    </div>
+                                    <br> --}}
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="price" value="1000-2000"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            1000 - 2000
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" name="price" value="2000-3000"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            2000 - 3000
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" name="price" value="3000-4000"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            3000 - 4000
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" name="price" value="4000-5000"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            4000 - 5000
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" name="price" value="5000-..."
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            5000 - ...
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </form>
     </div>
 </section>
@@ -141,83 +154,96 @@
                 </form>
                 <br>
                 {{-- checkboxs --}}
-                <div class="accordion accordion-flush" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <strong>Fabricante</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-
-                                @foreach ($viewData['trademarks'] as $menus)
-                                    <div class="form-check">
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <strong>Fabricante</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{-- <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="trademark"
-                                            value="toshiba" id="flexCheckDefault">
+                                            value="all" id="flexCheckChecked" checked>
                                         <label class="form-check-label" for="flexCheckChecked">
-                                            <input class="form-check-input" type="checkbox" name="trademark"
-                                                value="{{ $menus->trademarks }}" id="flexCheckChecked">
-                                            {{ $menus->trademarks }}
+                                            Todos
                                         </label>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                {{-- checkboxs --}}
-                <div class="accordion accordion-flush" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                <strong>Precio</strong>
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse show"
-                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="1000-2000" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        1000 - 2000
-                                    </label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="2000-3000" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        2000 - 3000
-                                    </label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="3000-4000" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        3000 - 4000
-                                    </label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="4000-5000" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        4000 - 5000
-                                    </label>
-                                    <br>
-                                    <input class="form-check-input" type="checkbox" name="price"
-                                        value="5000-..." id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        5000 - ...
-                                    </label>
-
+                                    </div><br> --}}
+                                    @foreach ($viewData['trademarks'] as $menus)
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="trademark"
+                                                value="toshiba" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                <input class="form-check-input" type="checkbox" name="trademark"
+                                                    value="{{ $menus->trademarks }}" id="flexCheckChecked">
+                                                {{ $menus->trademarks }}
+                                            </label>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <br>
+                    {{-- checkboxs --}}
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <strong>Precio</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{-- <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="price"
+                                            value="all" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Todos
+                                        </label>
+                                    </div>
+                                    <br> --}}
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="price" value="1000-2000"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            1000 - 2000
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" name="price" value="2000-3000"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            2000 - 3000
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" name="price" value="3000-4000"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            3000 - 4000
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" name="price" value="4000-5000"
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            4000 - 5000
+                                        </label>
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" name="price" value="5000-..."
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            5000 - ...
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </form>
     </div>
     <br>
