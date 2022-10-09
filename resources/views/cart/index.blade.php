@@ -43,7 +43,7 @@
             </table>
         </div>
         <div class="hide-desktop">
-            <table class="table table-borderless table-striped text-center">
+            <table class="table text-center">
                 <thead>
                     {{-- <tr>
                     <th scope="col"></th>
