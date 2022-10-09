@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<div class="hide-mobile">
-    <br>
-</div>
+    <div class="hide-mobile">
+        <br>
+    </div>
     {{-- <div class="container">
     <img src="{!! asset('...') !!}" alt="Responsive image">
 </div> --}}
@@ -80,8 +80,8 @@
                     <a class="hove btn stretched-link"></a>
                     <a href="{{ route('product.show', ['id' => $product->getId()]) }}">
                         <div class="img-card">
-                        <img src="{{ asset('/img/products/' . $product->getImage()) }}"
-                            class="card-img-top img-card d-inline mx-auto d-block" style="height:20em;">
+                            <img src="{{ asset('/img/products/' . $product->getImage()) }}"
+                                class="card-img-top img-card d-inline mx-auto d-block" style="height:20em;">
                         </div>
                     </a>
                     {{-- <div class="card-body text-center"> --}}
@@ -149,8 +149,8 @@
                 <div class="card">
                     <a href="{{ route('product.show', ['id' => $product->getId()]) }}">
                         <div class="img-card">
-                        <img src="{{ asset('/img/products/' . $product->getImage()) }}"
-                            class="card-img-top img-card d-inline mx-auto d-block" style="height:20em;">
+                            <img src="{{ asset('/img/products/' . $product->getImage()) }}"
+                                class="card-img-top img-card d-inline mx-auto d-block" style="height:20em;">
                         </div>
                     </a>
                     <div class="card-body">
@@ -246,8 +246,8 @@
                 <div class="card">
                     <a href="{{ route('product.show', ['id' => $product->getId()]) }}">
                         <div class="img-card">
-                        <img src="{{ asset('/img/products/' . $product->getImage()) }}" class="card-img-top img-card d-inline mx-auto d-block"
-                            style="height:20em; width:20em;">
+                            <img src="{{ asset('/img/products/' . $product->getImage()) }}"
+                                class="card-img-top img-card d-inline mx-auto d-block" style="height:20em; width:20em;">
                         </div>
                     </a>
                     <div class="card-body">
@@ -302,10 +302,10 @@
         @endforeach
     </div>
     <div class="hide-desktop">
-    <!--space for bottom navbar-->
-    <div class="container-sm">
-        <div class="p-3 border bg-light text-center fs-4"><strong>bottom navbar</strong></div>
-    </div>
-    <!--space for bottom navbar-->
+        <!--space for bottom navbar-->
+        <div class="container-sm">
+            <div class="p-3 border bg-light text-center fs-4"><strong>bottom navbar</strong></div>
+        </div>
+        <!--space for bottom navbar-->
     </div>
 @endsection

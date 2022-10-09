@@ -329,7 +329,7 @@
                         <a class="nav-link" href="/"><span class="iconify"
                                 data-icon="ant-design:home-outlined" style="font-size: 42px;"></span>Inicio</a>
                         <a class="nav-link" href="/categoriesm"><span class="iconify"
-                                data-icon="carbon:collapse-categories" style="font-size: 42px;"></span>Categorias</a>
+                                data-icon="carbon:collapse-categories" style="font-size: 42px;"></span>Categorías</a>
 
                         <!-- account or login -->
                         @if (!Auth::guest())

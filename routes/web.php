@@ -6,8 +6,6 @@ use App\Http\Controllers\CreateorderController;
 use App\Mail\acercaMailable;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
-use Mtvs\EloquentHashids\HasHashid;
-use Mtvs\EloquentHashids\HashidRouting;
 
 /*
 |--------------------------------------------------------------------------
@@ -195,4 +193,10 @@ Route::match(['GET', 'POST'], 'payment', [App\Http\Controllers\PayPalController:
 Route::match(['GET', 'POST'], 'completesuccess/{id}', [App\Http\Controllers\PayPalController::class, 'completesuccess']);
 Route::get('error', [App\Http\Controllers\PayPalController::class, 'error']);
 
-#Manage Post
+#Mobile
+Route::get('/settingsm', function () {
+    return view('mobile.settingsm');
+});
+Route::get('/categoriesm', function () {
+    return view('mobile.categoriesm');
+});
