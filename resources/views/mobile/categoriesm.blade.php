@@ -5,7 +5,7 @@
             <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Hardware <span class="iconify" data-icon="simple-icons:pcgamingwiki" style="font-size: 32px;"></span>
+                    <strong>Hardware</strong> <span class="iconify" data-icon="simple-icons:pcgamingwiki" style="font-size: 32px;"></span>
                 </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
@@ -33,7 +33,7 @@
             <h2 class="accordion-header" id="flush-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    Accesorios <span class="iconify" data-icon="bi:headphones" style="font-size: 32px;"></span>
+                    <strong>Accesorios</strong> <span class="iconify" data-icon="bi:headphones" style="font-size: 32px;"></span>
                 </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
@@ -51,7 +51,7 @@
             <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Computadoras <span class="iconify" data-icon="icon-park-outline:laptop" style="font-size: 32px;"></span>
+                    <strong>Computadoras</strong> <span class="iconify" data-icon="icon-park-outline:laptop" style="font-size: 32px;"></span>
                 </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
@@ -67,7 +67,7 @@
             <h2 class="accordion-header" id="flush-headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Electrónica <span class="iconify" data-icon="heroicons:tv" style="font-size: 32px;"></span>
+                    <strong>Electrónica</strong> <span class="iconify" data-icon="heroicons:tv" style="font-size: 32px;"></span>
                 </button>
             </h2>
             <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
