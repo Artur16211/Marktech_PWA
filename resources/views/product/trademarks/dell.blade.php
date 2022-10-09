@@ -6,7 +6,14 @@
             <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                 style="width: 300px; height: 50px"><br>
 
-                {!! $viewData['trademark_dell']->withQueryString()->links('layouts.pagination') !!}
+
+                <div class="hide-mobile">
+                    {!! $viewData['trademark_dell']->withQueryString()->links('layouts.pagination') !!}
+                </div>
+
+                <div class="hide-desktop mobile-pagination">
+                    {!! $viewData['trademark_dell']->withQueryString()->links('layouts.paginationm') !!}
+                </div>
 
             <div class="position-absolute top-0 start-0">
                 {{-- sort select --}}
@@ -225,7 +232,13 @@
 @endforeach
 @endif
 
-{!! $viewData['trademark_dell']->withQueryString()->links('layouts.pagination') !!}
+<div class="hide-mobile">
+    {!! $viewData['trademark_dell']->withQueryString()->links('layouts.pagination') !!}
+</div>
+
+<div class="hide-desktop mobile-pagination">
+    {!! $viewData['trademark_dell']->withQueryString()->links('layouts.paginationm') !!}
+</div>
 
 
 
