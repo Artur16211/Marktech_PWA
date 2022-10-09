@@ -7,7 +7,13 @@
                 <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                     style="width: 300px; height: 50px"><br>
 
-                {!! $details->withQueryString()->links('layouts.pagination') !!}
+                <div class="hide-mobile">
+                    {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+                </div>
+
+                <div class="hide-desktop mobile-pagination">
+                    {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
+                </div>
 
                 <div class="position-absolute top-0 start-0">
                     {{-- sort select --}}
@@ -32,8 +38,8 @@
                                     <strong>Fabricante</strong>
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     {{-- <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="trademark"
@@ -44,8 +50,8 @@
                                     </div><br> --}}
                                     @foreach ($viewData['trademarks'] as $menus)
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="trademark"
-                                                value="toshiba" id="flexCheckDefault">
+                                            <input class="form-check-input" type="checkbox" name="trademark" value="toshiba"
+                                                id="flexCheckDefault">
                                             <label class="form-check-label" for="flexCheckChecked">
                                                 <input class="form-check-input" type="checkbox" name="trademark"
                                                     value="{{ $menus->trademarks }}" id="flexCheckChecked">
@@ -67,8 +73,8 @@
                                     <strong>Precio</strong>
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     {{-- <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="price"
@@ -79,32 +85,32 @@
                                     </div>
                                     <br> --}}
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="1000-2000" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="1000-2000"
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             1000 - 2000
                                         </label>
                                         <br>
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="2000-3000" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="2000-3000"
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             2000 - 3000
                                         </label>
                                         <br>
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="3000-4000" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="3000-4000"
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             3000 - 4000
                                         </label>
                                         <br>
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="4000-5000" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="4000-5000"
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             4000 - 5000
                                         </label>
                                         <br>
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="5000-..." id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="5000-..."
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             5000 - ...
                                         </label>
@@ -149,8 +155,8 @@
                                     <strong>Fabricante</strong>
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     {{-- <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="trademark"
@@ -184,8 +190,8 @@
                                     <strong>Precio</strong>
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     {{-- <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="price"
@@ -196,32 +202,32 @@
                                     </div>
                                     <br> --}}
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="1000-2000" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="1000-2000"
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             1000 - 2000
                                         </label>
                                         <br>
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="2000-3000" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="2000-3000"
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             2000 - 3000
                                         </label>
                                         <br>
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="3000-4000" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="3000-4000"
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             3000 - 4000
                                         </label>
                                         <br>
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="4000-5000" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="4000-5000"
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             4000 - 5000
                                         </label>
                                         <br>
-                                        <input class="form-check-input" type="checkbox" name="price"
-                                            value="5000-..." id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" name="price" value="5000-..."
+                                            id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckChecked">
                                             5000 - ...
                                         </label>
@@ -246,56 +252,57 @@
 
                             <a href="{{ route('product.show', ['id' => $product->id]) }}">
                                 <div class="img-card">
-                                <img src="{{ asset('/img/products/' . $product->image) }}" width="200px"
-                                    height="200px" alt="imagen" class="card-img-top img-card d-inline mx-auto d-block">
+                                    <img src="{{ asset('/img/products/' . $product->image) }}" width="200px"
+                                        height="200px" alt="imagen"
+                                        class="card-img-top img-card d-inline mx-auto d-block">
                                 </div>
                             </a>
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <a href="{{ route('product.show', ['id' => $product->id]) }}">
-                        <h5 class="card-title"><b>{{ $product->name }}</b></h5>
-                        </a>
+                                    <h5 class="card-title"><b>{{ $product->name }}</b></h5>
+                                </a>
                                 @if ($product->getPrice() == 0)
-                                <span><strong class="text-primary fs-5">Gratis</strong></span>
-                            @elseif ($product->getDiscountedprice() > 0)
-                                <strong class="text-secondary text-decoration-line-through fs-5">
-                                    <x-money class="text-decoration-line-through" amount="{{ $product->getPrice() }}"
-                                        currency="MXN" convert />
-                                </strong>
-                                <strong class="text-primary fs-5">
-                                    <x-money class="text-decoration-line-through"
-                                        amount="{{ $product->getPrice() - $product->getDiscountedprice() }}" currency="MXN"
-                                        convert />
-                                </strong>
-                            @else
-                                <strong class="text-primary fs-5">
-                                    <x-money class="text-decoration-line-through" amount="{{ $product->getPrice() }}"
-                                        currency="MXN" convert />
-                                </strong>
-                            @endif
-                            <br>
-                            <br>
-                            @if ($product->getStock() > 0)
-                                <span class="badge bg-primary text-white fs-6"><span class="iconify"
-                                        data-icon="akar-icons:check"></span>
-                                    CON EXISTENCIA</span>
-                                {{-- // add to cart --}}
-                                <form action="{{ route('cart.add', ['id' => $product->getId()]) }}" method="POST">
-                                    @csrf
-                                    <br>
-                                    <input type="hidden" name="quantity" value="1">
-                                    <button type="submit" class="hov btn btn-primary btn-sm fs-6">
-                                        <span class="iconify" data-icon="mi:shopping-cart-add"></span>
-                                        <strong>Agregar al carrito</strong>
-                                    </button>
-                                </form>
-                            @else
-                                <span class="badge bg-secondary text-white fs-6"><span class="iconify"
-                                        data-icon="bi:x-lg"></span>
+                                    <span><strong class="text-primary fs-5">Gratis</strong></span>
+                                @elseif ($product->getDiscountedprice() > 0)
+                                    <strong class="text-secondary text-decoration-line-through fs-5">
+                                        <x-money class="text-decoration-line-through" amount="{{ $product->getPrice() }}"
+                                            currency="MXN" convert />
+                                    </strong>
+                                    <strong class="text-primary fs-5">
+                                        <x-money class="text-decoration-line-through"
+                                            amount="{{ $product->getPrice() - $product->getDiscountedprice() }}"
+                                            currency="MXN" convert />
+                                    </strong>
+                                @else
+                                    <strong class="text-primary fs-5">
+                                        <x-money class="text-decoration-line-through" amount="{{ $product->getPrice() }}"
+                                            currency="MXN" convert />
+                                    </strong>
+                                @endif
+                                <br>
+                                <br>
+                                @if ($product->getStock() > 0)
+                                    <span class="badge bg-primary text-white fs-6"><span class="iconify"
+                                            data-icon="akar-icons:check"></span>
+                                        CON EXISTENCIA</span>
+                                    {{-- // add to cart --}}
+                                    <form action="{{ route('cart.add', ['id' => $product->getId()]) }}" method="POST">
+                                        @csrf
+                                        <br>
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="hov btn btn-primary btn-sm fs-6">
+                                            <span class="iconify" data-icon="mi:shopping-cart-add"></span>
+                                            <strong>Agregar al carrito</strong>
+                                        </button>
+                                    </form>
+                                @else
+                                    <span class="badge bg-secondary text-white fs-6"><span class="iconify"
+                                            data-icon="bi:x-lg"></span>
 
-                                    SIN EXISTENCIA</span>
-                            @endif
+                                        SIN EXISTENCIA</span>
+                                @endif
 
                             </div>
 
@@ -307,6 +314,12 @@
         @endforeach
     @endif
 
-    {!! $details->withQueryString()->links('layouts.pagination') !!}
+    <div class="hide-mobile">
+        {!! $viewData['orders']->withQueryString()->links('layouts.pagination') !!}
+    </div>
 
-    @endsection
+    <div class="hide-desktop mobile-pagination">
+        {!! $viewData['orders']->withQueryString()->links('layouts.paginationm') !!}
+    </div>
+
+@endsection
