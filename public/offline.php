@@ -121,9 +121,9 @@
                                 <li><a class="dropdown-item" href="/armatucomputadora">Arma tu
                                         computadora</a></li>
                                 <li><a class="dropdown-item" href="/hardware/procesadores">Procesadores</a></li>
-                                <li><a class="dropdown-item" href="/hardware\motherboards">Targetas Madre</a></li>
+                                <li><a class="dropdown-item" href="/hardware\motherboards">Tarjetas Madre</a></li>
                                 <li><a class="dropdown-item" href="/hardware\gabinetes">Gabinetes</a></li>
-                                <li><a class="dropdown-item" href="/hardware\graficas">Targetas de video</a></li>
+                                <li><a class="dropdown-item" href="/hardware\graficas">Tarjetas de video</a></li>
                                 <li><a class="dropdown-item" href="/hardware\ram">Memorias RAM</a></li>
                                 <li><a class="dropdown-item" href="/hardware\disipadores">Disipadores</a></li>
                                 <li><a class="dropdown-item" href="/hardware\fuentes">Fuentes de Poder</a></li>

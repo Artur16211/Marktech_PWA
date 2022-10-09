@@ -22,7 +22,7 @@
                     <a href="/hardware/procesadores">Procesadores</a><br>
                     <a href="/hardware\motherboards">Tarjetas Madre</a><br>
                     <a href="/hardware\gabinetes">Gabinetes</a><br>
-                    <a href="/hardware\graficas">Targetas de Video</a><br>
+                    <a href="/hardware\graficas">Tarjetas de Video</a><br>
                     <a href="/hardware\ram">Memorias RAM</a><br>
                     <a href="/hardware\disipadores">Disipadores</a><br>
                     <a href="/hardware\fuentes">Fuentes de Poder</a><br>

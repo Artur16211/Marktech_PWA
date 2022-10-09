@@ -116,7 +116,7 @@ $session = \Stripe\Checkout\Session::create([
                                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             <span class="iconify" data-icon="logos:stripe" data-width="48"
                                                 style="margin-right:18px"></span>
-                                            <strong>Targeta de crédito o débito (Stripe)</strong>
+                                            <strong>Tarjeta de crédito o débito (Stripe)</strong>
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
