@@ -144,7 +144,7 @@
     <div class="navbar1">
         <div class="container-sm">
             <nav class="navbar navbar-expand-lg navbar-light bg-white"><a href="/"> <img
-                        src="{!! asset('img/mk2otln.png') !!}" class="logo-mk">
+                        src="./img/mk2otln.png" class="logo-mk">
                     <div class="container">
                         <a class="navbar-brand" href="{{ route('home.index"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -155,7 +155,7 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <form action="/busqueda" method="POST" role="search">
-                                    {{ csrf_field() }}
+
                                     <div class="input-group">
                                         <input type="text" class="form-control" name="barra"
                                             placeholder="Buscar productos..." style="width: 300px; height: 50px">
@@ -349,13 +349,8 @@
                                 data-icon="carbon:collapse-categories" style="font-size: 42px;"></span>Categorías</a>
 
                         <!-- account or login -->
-                        @if (!Auth::guest())
                             <a class="nav-link" href="/micuenta"><span class="iconify" data-icon="bx:user"
                                     style="font-size: 42px;"></span>Yo</a>
-                        @else
-                            <a class="nav-link" href="/IniciarSesion"><span class="iconify" data-icon="bx:user"
-                                    style="font-size: 42px;"></span>Yo</a>
-                        @endif
                         <!--account or login/-->
 
                         <a class="nav-link" href="/TuCarrito"><span class="iconify"
