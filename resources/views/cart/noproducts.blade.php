@@ -4,7 +4,6 @@
 @section('title', 'Marktech - Carrito')
 <div class="card">
     <div class="card-body">
-
         <div class="container">
             <div class="alert alert-info mx-auto" role="alert" style="width:40%;">
                 No hay productos en el carrito.
