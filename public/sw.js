@@ -12,11 +12,11 @@ self.addEventListener("install", function (event) {
 const filesToCache = [
     '/',
     '/offline.php',
-    '/css/style.css',
-    '/css/bootstrap.min.css',
-    '/js/bootstrap.min.js',
+    '/js/iconify.min.js',
     '/js/app.js',
     '/css/app.css',
+    '/css/style.css',
+    '/css/dark-mode.css',
 ];
 
 const checkResponse = function (request) {
