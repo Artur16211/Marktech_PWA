@@ -369,6 +369,9 @@
             <img src="./img/oflnconblue.png" class="offline img-fluid rounded mx-auto d-block" alt="Responsive image">
             <p class="h2 text-center"><strong>Sin Internet</strong></p>
             <p class="h4 text-center">Al parecer no tienes conexión a internet, por favor conectate a una red para poder continuar.</p>
+            <div class="d-grid gap-2">
+            <a type="button" class="btn btn-primary btn-lg btn-block" href="https://www.Marktech.ml/">Reintentar</a>
+            </div>
             <br>
             <div class="container-sm">
                 <div class="p-3 borderless bg-transparent text-center fs-4"><strong><span class="iconify"
