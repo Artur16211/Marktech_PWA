@@ -6,8 +6,8 @@
         </blockquote>
     </figure>
     <select class="form-select" aria-label="Default select example">
-        <option selected disabled>Idioma</option>
+        <option selected disabled>Selecciona un idioma</option>
         <option value="spanish">Español</option>
-        <option value="english">English</option>
+        <option value="english" disabled>English</option>
     </select>
 @endsection

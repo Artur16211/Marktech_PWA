@@ -302,9 +302,9 @@
     </div>
     <div class="hide-desktop">
         <!--space for bottom navbar-->
-        <div class="container-sm">
+        {{-- <div class="container-sm">
             <div class="p-3 border bg-light text-center fs-4"><strong>bottom navbar</strong></div>
-        </div>
+        </div> --}}
         <!--space for bottom navbar-->
     </div>
 @endsection

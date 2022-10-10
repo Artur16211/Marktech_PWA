@@ -73,9 +73,9 @@
                 @csrf
             </form>
             <!--space for bottom navbar-->
-            <div class="container-sm">
-                <div class="p-3 border bg-light text-center fs-4"><strong>bottom navbar</strong></div>
-            </div>
+            {{-- <div class="container-sm">
+                <div class="p-3 border bg-light text-center fs-4"><strong><span class="iconify" data-icon="codicon:blank" style="font-size: 32px;"></span></strong></div>
+            </div> --}}
             <!--space for bottom navbar-->
         </div>
         <br>
