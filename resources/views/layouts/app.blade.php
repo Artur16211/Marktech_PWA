@@ -376,8 +376,9 @@
         <!--content-->
         <div class="container my-4">
             @yield('content')
+            <br>
             <div class="container-sm">
-                <div class="p-3 border bg-light text-center fs-4"><strong><span class="iconify"
+                <div class="p-3 borderless bg-light text-center fs-4"><strong><span class="iconify"
                             data-icon="codicon:blank" style="font-size: 32px;"></span></strong></div>
             </div>
         </div>
