@@ -8,10 +8,18 @@
             <div class="alert alert-info mx-auto" role="alert" style="width:40%;">
                 No hay productos en el carrito.
             </div>
-
-            <button class="btn btn-black mb-2" onclick="window.location.href='/'">
-                Volver al inicio</button>
+            <div class="hide-desktop">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-black mb-2" onclick="window.location.href='/'">
+                        Volver al inicio</button>
+                </div>
+            </div>
+            <div class="hide-mobile">
+                <button class="btn btn-black mb-2" onclick="window.location.href='/'">
+                    Volver al inicio</button>
+            </div>
         </div>
     </div>
+</div>
 
 @endsection
