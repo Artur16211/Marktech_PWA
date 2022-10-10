@@ -367,7 +367,8 @@
         <!--content-->
         <div class="container my-4">
             <img src="./img/oflnconblue.png" class="img-fluid" alt="Responsive image">
-            <p>No hay conexión a internet</p>
+            <p class="h2 text-center"><strong>Sin Internet</strong></p>
+            <p class="h4 text-center">Al parecer no tienes conexión a internet, por favor conectate a una red para poder continuar.</p>
             <br>
             <div class="container-sm">
                 <div class="p-3 borderless bg-transparent text-center fs-4"><strong><span class="iconify"
