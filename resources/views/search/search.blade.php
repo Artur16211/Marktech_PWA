@@ -1,19 +1,29 @@
 @extends('layouts.navbar')
 @section('content')
 
+    {{-- submit search with checkbox --}}
+    <script>
+        $(document).ready(function() {
+            $("#search-form").on("change", "input:checkbox", function() {
+                $("#search-form").submit();
+            });
+        });
+    </script>
+
     <section id="filters">
         <div class="container position-relative">
-            <form method="GET">
+            <form id="search-form" method="GET">
                 <input type="text" class="form-control mx-auto" name="barra" placeholder="Buscar con filtros..."
                     style="width: 300px; height: 50px"><br>
 
-                    <div class="hide-mobile">
-                        {!! $details->render('layouts.pagination') !!}
-                    </div>
 
-                    <div class="hide-desktop mobile-pagination">
-                        {!! $details->render('layouts.paginationm') !!}
-                    </div>
+                <div class="hide-mobile">
+                    {!! $details->render('layouts.pagination') !!}
+                </div>
+
+                <div class="hide-desktop mobile-pagination">
+                    {!! $details->render('layouts.paginationm') !!}
+                </div>
 
                 <div class="position-absolute top-0 start-0">
                     {{-- sort select --}}
