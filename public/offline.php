@@ -366,6 +366,7 @@
 
         <!--content-->
         <div class="container my-4">
+            <img src="./img/oflnconblue.png" class="img-fluid" alt="Responsive image">
             <p>No hay conexión a internet</p>
             <br>
             <div class="container-sm">

@@ -18,6 +18,7 @@ const filesToCache = [
     '/css/style.css',
     '/css/dark-mode.css',
     '/img/mk2otln.png',
+    '/img/oflnconblue.png',
 ];
 
 const checkResponse = function (request) {
