@@ -213,3 +213,7 @@ Route::get('/theme', function () {
 Route::get('/languagem', function () {
     return view('mobile.settings.language');
 });
+
+Route::get('/offline', function () {
+    return view('offline');
+});

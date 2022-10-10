@@ -320,3 +320,9 @@
  .link-info {
      color: #007fff;
  }
+
+ .offline {
+     margin-top: 40%;
+     padding-left: 1%;
+     width: 70%;
+ }
