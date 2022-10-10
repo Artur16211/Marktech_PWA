@@ -11,7 +11,7 @@
 
             <button class="btn btn-black mb-2" onclick="window.location.href='/'">
                 Volver al inicio</button>
+        </div>
     </div>
-</div>
 
 @endsection
