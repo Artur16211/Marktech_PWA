@@ -184,8 +184,8 @@
                                             administrador</a>
                                     @endif
 
-                                    <a class="nav-link active position-relative" href="cart.index"><span
-                                            class="iconify" data-icon="eva:shopping-cart-outline" data-width="24"></span>
+                                    <a class="nav-link active position-relative" href="cart.index"><span class="iconify"
+                                            data-icon="eva:shopping-cart-outline" data-width="24"></span>
                                         Carrito
                                         {{-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
 
@@ -349,8 +349,8 @@
                                 data-icon="carbon:collapse-categories" style="font-size: 42px;"></span>Categorías</a>
 
                         <!-- account or login -->
-                            <a class="nav-link" href="/micuenta"><span class="iconify" data-icon="bx:user"
-                                    style="font-size: 42px;"></span>Yo</a>
+                        <a class="nav-link" href="/micuenta"><span class="iconify" data-icon="bx:user"
+                                style="font-size: 42px;"></span>Yo</a>
                         <!--account or login/-->
 
                         <a class="nav-link" href="/TuCarrito"><span class="iconify"
@@ -366,11 +366,14 @@
 
         <!--content-->
         <div class="container my-4">
-            <img src="./img/oflnconblue.png" class="offline img-fluid rounded mx-auto d-block" alt="Responsive image">
+            <img src="./img/oflnconblue.png" class="offline img-fluid rounded mx-auto d-block"
+                alt="Responsive image">
             <p class="h2 text-center"><strong>Sin Internet</strong></p>
-            <p class="h4 text-center">Al parecer no tienes conexión a internet, por favor conectate a una red para poder continuar.</p>
+            <p class="h4 text-center">Al parecer no tienes conexión a internet, por favor conectate a una red para
+                poder continuar.</p>
             <div class="d-grid gap-2">
-            <a type="button" class="btn btn-primary btn-lg btn-block" href="https://www.Marktech.ml/">Reintentar</a>
+                <a type="button" class="btn btn-primary btn-lg btn-block"
+                    onClick="window.location.reload();">Reintentar</a>
             </div>
             <br>
             <div class="container-sm">
