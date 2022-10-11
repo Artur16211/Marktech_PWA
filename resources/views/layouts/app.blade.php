@@ -37,6 +37,7 @@
 
     <link rel="stylesheet" href="{{ asset('offline-theme-slide.css') }}">
     <script src="{{ asset('offline.min.js') }}"></script>
+    <script src="{{ asset('offline-language-spanish.js') }}"></script>
 
 
 
