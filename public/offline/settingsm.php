@@ -369,7 +369,7 @@
         </blockquote>
     </figure>
     <div class="list-group">
-        <a href="/theme" class="list-group-item list-group-item-action">
+        <a href="offline/theme.php" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="arcticons:galaxy-themes" style="font-size: 32px;"></span>
                 </h5>
@@ -379,7 +379,7 @@
             <p class="mb-1">Temas</p>
             <small class="text-muted">Cambiar la apariencia de la aplicación.</small>
         </a>
-        <a href="/languagem" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="offline/languagem.php" class="list-group-item list-group-item-action" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="clarity:language-line" style="font-size: 32px;"></span></h5>
                 <small class="text-muted"><span class="iconify" data-icon="bi:arrow-right-circle"
@@ -388,7 +388,7 @@
             <p class="mb-1">Idioma</p>
             <small class="text-muted"></small>
         </a>
-        <a href="/aboutm" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="offline/aboutm.php" class="list-group-item list-group-item-action" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="fluent:info-20-regular" style="font-size: 32px;"></span>
                 </h5>
@@ -398,7 +398,7 @@
             <p class="mb-1">Acerca de Marktech</p>
             <small class="text-muted"></small>
         </a>
-        <a href="/helpm" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="offline/helpm.php" class="list-group-item list-group-item-action" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="ei:question" style="font-size: 32px;"></span></h5>
                 <small class="text-muted"><span class="iconify" data-icon="bi:arrow-right-circle"
