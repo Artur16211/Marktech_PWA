@@ -144,7 +144,7 @@
     <div class="navbar1">
         <div class="container-sm">
             <nav class="navbar navbar-expand-lg navbar-light bg-white"><a href="/offline.php"> <img
-                        src="./img/mk2otln.png" class="logo-mk">
+                        src="../img/mk2otln.png" class="logo-mk">
                     <div class="container">
                         <a class="navbar-brand" href="home.index"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
