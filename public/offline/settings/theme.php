@@ -14,8 +14,8 @@
     <link rel="apple-touch-icon" href="/logo.jpg">
     <link rel="manifest" href="/manifest.json">
     <!-- Bootstrap CSS -->
-    <script src="../../js/iconify.min.js"></script>
-    <script src="../../js/app.js" defer></script>
+    <script src="../js/iconify.min.js"></script>
+    <script src="../js/app.js" defer></script>
     <!-- check if the dark mode is enabled -->
     <script>
         if (localStorage.getItem('darkSwitch') !== null) {
@@ -34,9 +34,9 @@
     </script>
 
 
-    <link href="../../css/app.css" rel="stylesheet">
-    <link href="../../css/style.css" rel="stylesheet">
-    <link href="../../css/dark-mode.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/dark-mode.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <title>Marktech</title>
     <!-- icons ios -->
@@ -144,7 +144,7 @@
     <div class="navbar1">
         <div class="container-sm">
             <nav class="navbar navbar-expand-lg navbar-light bg-white"><a href="/offline.php"> <img
-                        src="../../img/mk2otln.png" class="logo-mk">
+                        src="../img/mk2otln.png" class="logo-mk">
                     <div class="container">
                         <a class="navbar-brand" href="home.index"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
