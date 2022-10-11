@@ -12,19 +12,19 @@ self.addEventListener("install", function (event) {
 const filesToCache = [
     '/',
     '/offline.php',
-    '/js/iconify.min.js',
-    '/js/app.js',
-    '/css/app.css',
-    '/css/style.css',
-    '/css/dark-mode.css',
-    '/img/mk2otln.png',
-    '/img/oflnconblue.png',
     '/offline/categoriesm.php',
     '/offline/settingsm.php',
     '/offline/settings/about.php',
     '/offline/settings/help.php',
     '/offline/settings/language.php',
     '/offline/settings/theme.php',
+    '/js/iconify.min.js',
+    '/js/app.js',
+    '/css/app.css',
+    '/css/style.css',
+    '/css/dark-mode.css',
+    '/img/mk2otln.png',
+    '/img/oflnconblue.png'
 ];
 
 const checkResponse = function (request) {
