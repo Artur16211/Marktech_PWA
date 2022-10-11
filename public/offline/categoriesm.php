@@ -382,22 +382,22 @@
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
 
-                    <a class="h3 text-center" href="/hardware"><strong>Arma tu computadora</strong></a><br>
+                    <a class="h3 text-center" href="../hardware"><strong>Arma tu computadora</strong></a><br>
                     <hr class="hr" />
-                    <a class="h4" href="/hardware/procesadores">Procesadores</a><br>
-                    <a class="h4" href="/hardware/motherboards">Tarjetas Madre</a><br>
-                    <a class="h4" href="/hardware/gabinetes">Gabinetes</a><br>
-                    <a class="h4" href="/hardware/graficas">Tarjetas de Video</a><br>
-                    <a class="h4" href="/hardware/ram">Memorias RAM</a><br>
-                    <a class="h4" href="/hardware/disipadores">Disipadores</a><br>
-                    <a class="h4" href="/hardware/fuentes">Fuentes de Poder</a><br>
+                    <a class="h4" href="../hardware/procesadores">Procesadores</a><br>
+                    <a class="h4" href="../hardware/motherboards">Tarjetas Madre</a><br>
+                    <a class="h4" href="../hardware/gabinetes">Gabinetes</a><br>
+                    <a class="h4" href="../hardware/graficas">Tarjetas de Video</a><br>
+                    <a class="h4" href="../hardware/ram">Memorias RAM</a><br>
+                    <a class="h4" href="../hardware/disipadores">Disipadores</a><br>
+                    <a class="h4" href="../hardware/fuentes">Fuentes de Poder</a><br>
                     <br>
                     <a class="h3 text-center" href="/hardware"><strong>Almacenamiento</strong></a><br>
                     <hr class="hr" />
-                    <a class="h4" href="/hardware/ssd">Unidades de Estado Solido</a><br>
-                    <a class="h4" href="/hardware/hdd">Discos Duros</a><br>
-                    <a class="h4" href="/hardware/ram">Memorias RAM</a><br>
-                    <a class="h4" href="/hardware/usb">USB/SD</a><br>
+                    <a class="h4" href="../hardware/ssd">Unidades de Estado Solido</a><br>
+                    <a class="h4" href="../hardware/hdd">Discos Duros</a><br>
+                    <a class="h4" href="../hardware/ram">Memorias RAM</a><br>
+                    <a class="h4" href="../hardware/usb">USB/SD</a><br>
 
                 </div>
             </div>
@@ -413,12 +413,12 @@
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    <a class="h3 text-center" href="/hardware"><strong>Accesorios</strong></a><br>
+                    <a class="h3 text-center" href="../hardware"><strong>Accesorios</strong></a><br>
                     <hr class="hr" />
-                    <a class="h4" href="/accesorios/audifonos">Audifonos</a><br>
-                    <a class="h4" href="/accesorios/alfombrillas">Alfombrillas</a><br>
-                    <a class="h4" href="/accesorios/mouse">Mouse</a><br>
-                    <a class="h4" href="/accesorios/teclados">Teclados</a><br>
+                    <a class="h4" href="../accesorios/audifonos">Audifonos</a><br>
+                    <a class="h4" href="../accesorios/alfombrillas">Alfombrillas</a><br>
+                    <a class="h4" href="../accesorios/mouse">Mouse</a><br>
+                    <a class="h4" href="../accesorios/teclados">Teclados</a><br>
                 </div>
             </div>
         </div>
@@ -433,10 +433,10 @@
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    <a class="h3 text-center" href="/hardware"><strong>Computadoras</strong></a><br>
+                    <a class="h3 text-center" href="../hardware"><strong>Computadoras</strong></a><br>
                     <hr class="hr" />
-                    <a class="h4" href="/computadoras/laptop">Laptop</a><br>
-                    <a class="h4" href="/computadoras/escritorio">Escritorio</a><br>
+                    <a class="h4" href="../computadoras/laptop">Laptop</a><br>
+                    <a class="h4" href="../computadoras/escritorio">Escritorio</a><br>
                 </div>
             </div>
         </div>
@@ -451,14 +451,14 @@
             <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
                 data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                    <a class="h3 text-center" href="/hardware"><strong>Electrónica</strong></a><br>
+                    <a class="h3 text-center" href="../hardware"><strong>Electrónica</strong></a><br>
                     <hr class="hr" />
-                    <a class="h4" href="/electronica/consolas">Consolas</a><br>
-                    <a class="h4" href="/electronica/tv">Televisores</a><br>
-                    <a class="h4" href="/electronica/monitores">Monitores</a><br>
-                    <a class="h4" href="/electronica/bocinas">Bocinas</a><br>
-                    <a class="h4" href="/electronica/camaras">Cámaras</a><br>
-                    <a class="h4" href="/electronica/telefonos">Teléfonos</a><br>
+                    <a class="h4" href="../electronica/consolas">Consolas</a><br>
+                    <a class="h4" href="../electronica/tv">Televisores</a><br>
+                    <a class="h4" href="../electronica/monitores">Monitores</a><br>
+                    <a class="h4" href="../electronica/bocinas">Bocinas</a><br>
+                    <a class="h4" href="../electronica/camaras">Cámaras</a><br>
+                    <a class="h4" href="../electronica/telefonos">Teléfonos</a><br>
                 </div>
             </div>
         </div>
