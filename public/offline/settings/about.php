@@ -370,7 +370,7 @@
     </figure>
 
     <div class="list-group">
-        <a href="./settings/footer/av.php" class="list-group-item list-group-item-action">
+        <a href="./footer/av.php" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="material-symbols:policy-outline" style="font-size: 38px;"></span>
                 </h5>
@@ -381,7 +381,7 @@
                 Privacidad</p>
             <small class="text-muted"></small>
         </a>
-        <a href="./settings/footer/tyc.php" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="./footer/tyc.php" class="list-group-item list-group-item-action" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="icon-park-outline:termination-file" style="font-size: 32px;"></span></h5>
                 <small class="text-muted"><span class="iconify" data-icon="bi:arrow-right-circle"
