@@ -343,9 +343,9 @@
             <nav class="navbar navbar-light bg-light fixed-bottom">
                 <div class="container-fluid">
                     <div class="navbar-nav flex-row">
-                        <a class="nav-link" href="/offline.php"><span class="iconify"
+                        <a class="nav-link" href="../../offline.php"><span class="iconify"
                                 data-icon="ant-design:home-outlined" style="font-size: 42px;"></span>Inicio</a>
-                        <a class="nav-link" href="/offline/categoriesm.php"><span class="iconify"
+                        <a class="nav-link" href="../../offline/categoriesm.php"><span class="iconify"
                                 data-icon="carbon:collapse-categories" style="font-size: 42px;"></span>Categorías</a>
 
                         <!-- account or login -->
@@ -355,7 +355,7 @@
 
                         <a class="nav-link" href="/TuCarrito"><span class="iconify"
                                 data-icon="eva:shopping-cart-outline" style="font-size: 42px;"></span>Carrito</a>
-                        <a class="nav-link" href="/offline/settingsm.php"><span class="iconify"
+                        <a class="nav-link" href="../../offline/settingsm.php"><span class="iconify"
                                 data-icon="clarity:settings-line" style="font-size: 42px;"></span>Ajustes</a>
                     </div>
                 </div>
@@ -370,7 +370,7 @@
     </figure>
 
     <div class="list-group">
-        <a href="/avisodeprivacidad" class="list-group-item list-group-item-action">
+        <a href="./settings/footer/av.php" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="material-symbols:policy-outline" style="font-size: 38px;"></span>
                 </h5>
@@ -381,7 +381,7 @@
                 Privacidad</p>
             <small class="text-muted"></small>
         </a>
-        <a href="/terminosycondiciones" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="./settings/footer/tyc.php" class="list-group-item list-group-item-action" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="icon-park-outline:termination-file" style="font-size: 32px;"></span></h5>
                 <small class="text-muted"><span class="iconify" data-icon="bi:arrow-right-circle"
