@@ -37,6 +37,10 @@
     <link href="./css/app.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/dark-mode.css" rel="stylesheet">
+
+    <script src="{{ asset('./js/offline.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('./css/offline-language-spanish.css') }}">
+    <link rel="stylesheet" href="{{ asset('./css/offline-theme-slide.css') }}">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <title>Marktech</title>
     <!-- icons ios -->
@@ -137,6 +141,14 @@
         media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
         href="img/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
     <!-- icons ios -->
+
+    <script>
+        var run = function() {
+            if (Offline.state === 'up')
+                Offline.check();
+        }
+        setInterval(run, 5000);
+    </script>
 </head>
 
 <body>
