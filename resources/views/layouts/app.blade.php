@@ -34,12 +34,9 @@
         })
     </script>
 
-
-    <link rel="stylesheet" href="{{ asset('offline-theme-slide.css') }}">
-    <script src="{{ asset('offline.min.js') }}"></script>
-    <script src="{{ asset('offline-language-spanish.js') }}"></script>
-
-
+    <script src="{{ asset('js/offline.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/offline-language-spanish.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/offline-theme-slide.css') }}">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
