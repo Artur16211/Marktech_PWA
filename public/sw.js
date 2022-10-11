@@ -18,6 +18,8 @@ const filesToCache = [
     '/offline/settings/help.php',
     '/offline/settings/language.php',
     '/offline/settings/theme.php',
+    '/offline/settings/footer/av.php',
+    '/offline/settings/footer/tyc.php',
     '/js/iconify.min.js',
     '/js/app.js',
     '/css/app.css',
