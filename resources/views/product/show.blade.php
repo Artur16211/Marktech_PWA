@@ -119,7 +119,7 @@
 
     </div>
 
-    <div class="container">
+    {{-- <div class="container">
         <h2>Escribe una reseña sobre tu producto</h2>
         <form>
             <textarea id="" placeholder="Add Your Comment" value=" "></textarea>
@@ -169,5 +169,5 @@
             localStorage.setItem("comments", JSON.stringify(comments));
         };
 
-    </script>
+    </script> --}}
 @endsection
