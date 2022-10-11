@@ -343,9 +343,9 @@
             <nav class="navbar navbar-light bg-light fixed-bottom">
                 <div class="container-fluid">
                     <div class="navbar-nav flex-row">
-                        <a class="nav-link" href="/"><span class="iconify"
+                        <a class="nav-link" href="/offline.php"><span class="iconify"
                                 data-icon="ant-design:home-outlined" style="font-size: 42px;"></span>Inicio</a>
-                        <a class="nav-link" href="/categoriesm"><span class="iconify"
+                        <a class="nav-link" href="/offline/categoriesm.php"><span class="iconify"
                                 data-icon="carbon:collapse-categories" style="font-size: 42px;"></span>Categorías</a>
 
                         <!-- account or login -->
@@ -355,7 +355,7 @@
 
                         <a class="nav-link" href="/TuCarrito"><span class="iconify"
                                 data-icon="eva:shopping-cart-outline" style="font-size: 42px;"></span>Carrito</a>
-                        <a class="nav-link" href="/settingsm"><span class="iconify"
+                        <a class="nav-link" href="/offline/settingsm.php"><span class="iconify"
                                 data-icon="clarity:settings-line" style="font-size: 42px;"></span>Ajustes</a>
                     </div>
                 </div>

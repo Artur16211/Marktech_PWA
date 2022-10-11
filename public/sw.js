@@ -19,6 +19,12 @@ const filesToCache = [
     '/css/dark-mode.css',
     '/img/mk2otln.png',
     '/img/oflnconblue.png',
+    '/offline/categoriesm.php',
+    '/offline/settingsm.php',
+    '/offline/settings/about.php',
+    '/offline/settings/help.php',
+    '/offline/settings/language.php',
+    '/offline/settings/theme.php',
 ];
 
 const checkResponse = function (request) {
