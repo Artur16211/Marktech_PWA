@@ -58,8 +58,8 @@
                                 strokeColor: '#894A00',
                                 strokeWidth: 10,
                                 starSize: 25
-                              });
-                              </script>
+                            });
+                        </script>
 
                         <p class="card-text">
                         <form method="POST" action="{{ route('cart.add', ['id' => $viewData['product']->getId()]) }}">
@@ -119,6 +119,55 @@
 
     </div>
 
+    <div class="container">
+        <h2>Escribe una reseña sobre tu producto</h2>
+        <form>
+            <textarea id="" placeholder="Add Your Comment" value=" "></textarea>
+            <div class="btn">
+                <input id="submit" type="submit" value="Comment">
+                <button id="clear">
+                    &#128591;</button>
+            </div>
+        </form>
+    </div>
+    <div class="comments">
+        <h2>Reviews</h2>
+        <div id="comment-box">
+        </div>
+    </div>
 
+    <script>
+        const submit = document.getElementById("submit");
+        const clear = document.getElementById("clear");
+        const textarea = document.querySelector("textarea");
+        const commentBox = document.getElementById("comment-box");
+        const comments = [];
+        submit.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (textarea.value !== "") {
+                comments.push(textarea.value);
+                textarea.value = "";
+                displayComments();
+            }
+        });
+        clear.addEventListener("click", () => {
+            comments.length = 0;
+            displayComments();
+        });
+        const displayComments = () => {
+            commentBox.innerHTML = "";
+            comments.forEach((comment) => {
+                const div = document.createElement("div");
+                div.classList.add("comment");
+                div.innerHTML = `<p>${comment}</p>`;
+                commentBox.appendChild(div);
+            });
+        };
 
+        // save comments in local storage
+        const saveComments = () => {
+            localStorage.setItem("comments", JSON.stringify(comments));
+        };
+
+    </script>
 @endsection

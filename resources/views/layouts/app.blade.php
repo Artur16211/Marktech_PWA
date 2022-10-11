@@ -35,6 +35,11 @@
     </script>
 
 
+    <link rel="stylesheet" href="{{ asset('offline-theme-slide.css') }}">
+    <script src="{{ asset('offline.min.js') }}"></script>
+
+
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dark-mode.css') }}" rel="stylesheet">
@@ -138,10 +143,21 @@
         media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
         href="{{ asset('img/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png') }}">
     <!-- icons ios -->
+
+    <script>
+        var run = function() {
+            if (Offline.state === 'up')
+                Offline.check();
+        }
+        setInterval(run, 5000);
+    </script>
 </head>
 
 <body>
     <!-- header -->
+
+
+
     <div class="navbar1">
         <div class="container-sm">
             <nav class="navbar navbar-expand-lg navbar-light bg-white"><a href="/"> <img
