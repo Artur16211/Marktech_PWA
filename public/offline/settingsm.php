@@ -13,7 +13,7 @@
     <!-- PWA  -->
     <link rel="apple-touch-icon" href="/logo.jpg">
     <link rel="manifest" href="/manifest.json">
-    <!-- Bootstrap CSS -->
+    <!-- Botstrap CSS -->
     <script src="../js/iconify.min.js"></script>
     <script src="../js/app.js" defer></script>
     <!-- check if the dark mode is enabled -->
@@ -338,7 +338,7 @@
             </nav>
         </div>
 
-        <!-- Bottom fixed navbar bootstrap -->
+        <!-- Bottom fixed navbar botstrap -->
         <div class="mobile-nav">
             <nav class="navbar navbar-light bg-light fixed-bottom">
                 <div class="container-fluid">
@@ -369,7 +369,7 @@
         </blockquote>
     </figure>
     <div class="list-group">
-        <a href="offline/theme.php" class="list-group-item list-group-item-action">
+        <a href="./offline/theme.php" class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="arcticons:galaxy-themes" style="font-size: 32px;"></span>
                 </h5>
@@ -379,7 +379,7 @@
             <p class="mb-1">Temas</p>
             <small class="text-muted">Cambiar la apariencia de la aplicación.</small>
         </a>
-        <a href="offline/languagem.php" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="./offline/languagem.php" class="list-group-item list-group-item-action" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="clarity:language-line" style="font-size: 32px;"></span></h5>
                 <small class="text-muted"><span class="iconify" data-icon="bi:arrow-right-circle"
@@ -388,7 +388,7 @@
             <p class="mb-1">Idioma</p>
             <small class="text-muted"></small>
         </a>
-        <a href="offline/aboutm.php" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="./offline/aboutm.php" class="list-group-item list-group-item-action" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="fluent:info-20-regular" style="font-size: 32px;"></span>
                 </h5>
@@ -398,7 +398,7 @@
             <p class="mb-1">Acerca de Marktech</p>
             <small class="text-muted"></small>
         </a>
-        <a href="offline/helpm.php" class="list-group-item list-group-item-action" aria-current="true">
+        <a href="./offline/helpm.php" class="list-group-item list-group-item-action" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><span class="iconify" data-icon="ei:question" style="font-size: 32px;"></span></h5>
                 <small class="text-muted"><span class="iconify" data-icon="bi:arrow-right-circle"
