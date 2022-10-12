@@ -20,3 +20,5 @@ class EmailController extends Controller
         return redirect()->back();
     }
 }
+
+wadawdwawa
