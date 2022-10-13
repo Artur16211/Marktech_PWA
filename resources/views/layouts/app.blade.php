@@ -439,8 +439,8 @@
                                         <br>
                                         <ul class="list-unstyled mb-0">
                                             <li>
-                                                <a href="mailto:herrera.alvaradoartu@gmail.com"
-                                                    class="text-white">Contactanos</a>
+                                                <a href="mailto:marktechof@gmail.com"
+                                                    class="text-white">Contáctanos</a>
                                             </li>
                                             <li>
                                                 <a href="/Sugerencias" class="text-white">Sugerencias</a>
@@ -475,11 +475,11 @@
                                         <br>
                                         <ul class="list-unstyled mb-0">
                                             <li>
-                                                <a href="/avisodeprivacidad" class="text-white">Politica de
+                                                <a href="/avisodeprivacidad" class="text-white">Política de
                                                     Privacidad</a>
                                             </li>
                                             <li>
-                                                <a href="/terminosycondiciones" class="text-white">Terminos y
+                                                <a href="/terminosycondiciones" class="text-white">Términos y
                                                     Condiciones</a>
                                             </li>
                                         </ul>
@@ -500,7 +500,7 @@
                         <!--Derechos-->
                         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                             Todos los derechos reservados 2022 ©:
-                            <a class="text-white" href="/">https://Marktech.ml/</a>
+                            <a class="text-white" href="https://marktech.ml/">https://marktech.ml/</a>
                         </div>
                     </footer>
                 </section>
