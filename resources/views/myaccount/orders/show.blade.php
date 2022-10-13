@@ -63,49 +63,99 @@ $session = \Stripe\Checkout\Session::create([
                         <b class="fs-5">Dirección de envio:</b> <a
                             class="fs-5">{{ $viewData['orders']->getAddress() }}</a><br>
 
-                        <table class="table table-borderless table-striped text-center mt-3">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Id único</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">Descuento</th>
-                                    <th scope="col">Cantidad</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($viewData['orders']->getItems() as $item)
+                        <div class="hide-mobile">
+                            <table class="table table-borderless table-striped text-center mt-3">
+                                <thead>
                                     <tr>
-                                        <td>
-                                            <img src="{{ asset('/img/products/' . $item->getProduct()->getImage()) }}"
-                                                alt="{{ $item->getProduct()->getName() }}" class="img-fluid"
-                                                width="100">
-                                        </td>
-                                        <td>
-                                            <a class="link-success"
-                                                href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
-                                                {{ $item->getProduct()->getName() }}
-                                            </a>
-                                        </td>
-                                        <td>{{ $item->getId() }}</td>
-                                        <td>
-                                            <x-money amount="{{ $item->getPrice() }}" currency="MXN" convert />
-                                        </td>
-                                        @if ([$item->getDiscountedprice()] > 0)
-                                            <td class="text-decoration-line-through">-
-                                                <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN"
-                                                    convert />
-                                            </td>
-                                        @else
-                                            <td></td>
-                                        @endif
-                                        <td>{{ $item->getQuantity() }}</td>
-
+                                        <th scope="col"></th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Id único</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Descuento</th>
+                                        <th scope="col">Cantidad</th>
                                     </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach ($viewData['orders']->getItems() as $item)
+                                        <tr>
+                                            <td>
+                                                <img src="{{ asset('/img/products/' . $item->getProduct()->getImage()) }}"
+                                                    alt="{{ $item->getProduct()->getName() }}" class="img-fluid"
+                                                    width="100">
+                                            </td>
+                                            <td>
+                                                <a class="link-success"
+                                                    href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
+                                                    {{ $item->getProduct()->getName() }}
+                                                </a>
+                                            </td>
+                                            <td>{{ $item->getId() }}</td>
+                                            <td>
+                                                <x-money amount="{{ $item->getPrice() }}" currency="MXN" convert />
+                                            </td>
+                                            @if ([$item->getDiscountedprice()] > 0)
+                                                <td class="text-decoration-line-through">-
+                                                    <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN"
+                                                        convert />
+                                                </td>
+                                            @else
+                                                <td></td>
+                                            @endif
+                                            <td>{{ $item->getQuantity() }}</td>
+
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="hide-desktop">
+                            <div class="hide-desktop">
+                                <table class="table text-center">
+                                    <thead>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($viewData['orders']->getItems() as $item)
+                                            <tr>
+                                                <th scope="row"></th>
+                                                <td>
+                                                    <img src="{{ asset('/img/products/' . $item->image) }}"
+                                                        alt="{{ $item->getProduct()->getName() }}" class="img-fluid" width="100">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Nombre</th>
+                                                <td>{{ $item->getProduct()->getName() }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Código de Producto</th>
+                                                <td>{{ $item->getId() }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Precio</th>
+                                                <td>
+                                                    <x-money amount="{{ $item->getPrice() - $item->getDiscountedprice() }}"
+                                                        currency="MXN" convert />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Descuento</th>
+                                                @if ([$item->getDiscountedprice()] > 0)
+                                                    <td class="text-decoration-line-through">-
+                                                        <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN" convert />
+                                                    </td>
+                                                @else
+                                                    <td></td>
+                                                @endif
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Cantidad</th>
+                                                <td>{{ $item->getQuantity() }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                         <br>
                         @if ($viewData['orders']->getState() == 'No Pagado')
                             <p class="text-center fs-3"><strong>Escoge un método de pago:<strong></p>

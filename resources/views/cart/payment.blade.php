@@ -9,30 +9,68 @@
 
     <div class="card">
         <div class="card-body">
-            @csrf
-            <table class="table table-borderless table-striped text-center mt-3">
-                <thead>
-                    <tr>
+            <div class="hide-mobile">
+                <table class="table table-borderless table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Código de Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Descuento</th>
+                            <th scope="col">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($viewData['products'] as $product)
+                            <tr>
+                                <td>
+                                    <img src="{{ asset('/img/products/' . $product->image) }}"
+                                        alt="{{ $product->getName() }}" class="img-fluid" width="100">
+                                </td>
+                                <td>{{ $product->getName() }}</td>
+                                <td>{{ $product->getId() }}</td>
+                                <td>
+                                    <x-money amount="{{ $product->getPrice() - $product->getDiscountedprice() }}"
+                                        currency="MXN" convert />
+                                </td>
+                                @if ([$product->getDiscountedprice()] > 0)
+                                    <td class="text-decoration-line-through">-
+                                        <x-money amount="{{ $product->getDiscountedprice() }}" currency="MXN" convert />
+                                    </td>
+                                @else
+                                    <td></td>
+                                @endif
+                                <td>{{ session('products')[$product->getId()] }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <div class="hide-desktop">
+                <table class="table text-center">
+                    <thead>
+                        {{-- <tr>
                         <th scope="col"></th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Id único</th>
+                        <th scope="col">Código de Producto</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Descuento</th>
                         <th scope="col">Cantidad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($viewData['products'] as $product)
-                        <tr>
+                    </tr> --}}
+                    </thead>
+                    <tbody>
+                        @foreach ($viewData['products'] as $product)
+                            {{-- <tr>
                             <td>
-                                <img src="{{ asset('/img/products/' . $product->image) }}"
-                                    alt="{{ $product->getName() }}" class="img-fluid" width="100">
+                                <img src="{{ asset('/img/products/' . $product->image) }}" alt="{{ $product->getName() }}"
+                                    class="img-fluid" width="100">
                             </td>
                             <td>{{ $product->getName() }}</td>
                             <td>{{ $product->getId() }}</td>
                             <td>
-                                <x-money amount="{{ $product->getPrice() - $product->getDiscountedprice() }}"
-                                    currency="MXN" convert />
+                                <x-money amount="{{ $product->getPrice() - $product->getDiscountedprice() }}" currency="MXN"
+                                    convert />
                             </td>
                             @if ([$product->getDiscountedprice()] > 0)
                                 <td class="text-decoration-line-through">-
@@ -42,10 +80,47 @@
                                 <td></td>
                             @endif
                             <td>{{ session('products')[$product->getId()] }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                        </tr> --}}
+                            <tr>
+                                <th scope="row"></th>
+                                <td>
+                                    <img src="{{ asset('/img/products/' . $product->image) }}"
+                                        alt="{{ $product->getName() }}" class="img-fluid" width="100">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Nombre</th>
+                                <td>{{ $product->getName() }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Código de Producto</th>
+                                <td>{{ $product->getId() }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Precio</th>
+                                <td>
+                                    <x-money amount="{{ $product->getPrice() - $product->getDiscountedprice() }}"
+                                        currency="MXN" convert />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Descuento</th>
+                                @if ([$product->getDiscountedprice()] > 0)
+                                    <td class="text-decoration-line-through">-
+                                        <x-money amount="{{ $product->getDiscountedprice() }}" currency="MXN" convert />
+                                    </td>
+                                @else
+                                    <td></td>
+                                @endif
+                            </tr>
+                            <tr>
+                                <th scope="row">Cantidad</th>
+                                <td>{{ session('products')[$product->getId()] }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
             <div class="row">
                 <div class="text-end">
 
