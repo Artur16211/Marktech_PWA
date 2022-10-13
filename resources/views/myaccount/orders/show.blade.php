@@ -9,7 +9,7 @@ $session = \Stripe\Checkout\Session::create([
             'price_data' => [
                 'currency' => 'mxn',
                 'product_data' => [
-                    'name' => 'Marktech: Pedido ' . $viewData['orders']->getId(),
+                    'name' => 'Marktech: Pedido ' . $viewData['orders']->hashid(),
                 ],
                 'unit_amount' => $viewData['orders']->getTotal() * 100,
             ],
@@ -18,8 +18,8 @@ $session = \Stripe\Checkout\Session::create([
     ],
     'mode' => 'payment',
     // send success url with order id
-    'success_url' => 'https://Marktech.ml/stripe/success/' . $viewData['orders']->getId(),
-    'cancel_url' => 'https://Marktech.ml/stripe/cancel',
+    'success_url' => 'https://marktech.ml/stripe/success/' . $viewData['orders']->getId(),
+    'cancel_url' => 'https://marktech.ml/stripe/cancel',
 ]);
 ?>
 
@@ -63,102 +63,49 @@ $session = \Stripe\Checkout\Session::create([
                         <b class="fs-5">Dirección de envio:</b> <a
                             class="fs-5">{{ $viewData['orders']->getAddress() }}</a><br>
 
-                        <div class="hide-mobile">
-                            <table class="table table-borderless table-striped text-center mt-3">
-                                <thead>
+                        <table class="table table-borderless table-striped text-center mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Id único</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Descuento</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($viewData['orders']->getItems() as $item)
                                     <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Id único</th>
-                                        <th scope="col">Precio</th>
-                                        <th scope="col">Descuento</th>
-                                        <th scope="col">Cantidad</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($viewData['orders']->getItems() as $item)
-                                        <tr>
-                                            <td>
-                                                <img src="{{ asset('/img/products/' . $item->getProduct()->getImage()) }}"
-                                                    alt="{{ $item->getProduct()->getName() }}" class="img-fluid"
-                                                    width="100">
+                                        <td>
+                                            <img src="{{ asset('/img/products/' . $item->getProduct()->getImage()) }}"
+                                                alt="{{ $item->getProduct()->getName() }}" class="img-fluid"
+                                                width="100">
+                                        </td>
+                                        <td>
+                                            <a class="link-success"
+                                                href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
+                                                {{ $item->getProduct()->getName() }}
+                                            </a>
+                                        </td>
+                                        <td>{{ $item->getId() }}</td>
+                                        <td>
+                                            <x-money amount="{{ $item->getPrice() }}" currency="MXN" convert />
+                                        </td>
+                                        @if ([$item->getDiscountedprice()] > 0)
+                                            <td class="text-decoration-line-through">-
+                                                <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN"
+                                                    convert />
                                             </td>
-                                            <td>
-                                                <a class="link-primary"
-                                                    href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
-                                                    {{ $item->getProduct()->getName() }}
-                                                </a>
-                                            </td>
-                                            <td>{{ $item->getId() }}</td>
-                                            <td>
-                                                <x-money amount="{{ $item->getPrice() }}" currency="MXN" convert />
-                                            </td>
-                                            @if ([$item->getDiscountedprice()] > 0)
-                                                <td class="text-decoration-line-through">-
-                                                    <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN"
-                                                        convert />
-                                                </td>
-                                            @else
-                                                <td></td>
-                                            @endif
-                                            <td>{{ $item->getQuantity() }}</td>
+                                        @else
+                                            <td></td>
+                                        @endif
+                                        <td>{{ $item->getQuantity() }}</td>
 
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="hide-desktop">
-                            <table class="table text-center">
-                                <thead>
-                                </thead>
-                                <tbody>
-                                    @foreach ($viewData['orders']->getItems() as $item)
-                                        <tr>
-                                            <th scope="row"></th>
-                                            <td>
-                                                <img src="{{ asset('/img/products/' . $item->getProduct()->getImage()) }}"
-                                                    alt="{{ $item->getProduct()->getName() }}" class="img-fluid"
-                                                    width="100">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Nombre</th>
-                                            <td>
-                                                <a class="link-primary"
-                                                    href="{{ route('product.show', ['id' => $item->getProduct()->getId()]) }}">
-                                                    {{ $item->getProduct()->getName() }}
-                                                </a>
-                                            </td>
-                                        <tr>
-                                            <th scope="row">Código de Producto</th>
-                                            <td>{{ $item->getId() }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Precio</th>
-                                            <td>
-                                                <x-money amount="{{ $item->getPrice() }}" currency="MXN" convert />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Descuento</th>
-                                            @if ([$item->getDiscountedprice()] > 0)
-                                                <td class="text-decoration-line-through">-
-                                                    <x-money amount="{{ $item->getDiscountedprice() }}" currency="MXN"
-                                                        convert />
-                                                </td>
-                                            @else
-                                                <td></td>
-                                            @endif
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Cantidad</th>
-                                            <td>{{ $item->getQuantity() }}</td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                         <br>
                         @if ($viewData['orders']->getState() == 'No Pagado')
                             <p class="text-center fs-3"><strong>Escoge un método de pago:<strong></p>
@@ -169,7 +116,7 @@ $session = \Stripe\Checkout\Session::create([
                                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             <span class="iconify" data-icon="logos:stripe" data-width="48"
                                                 style="margin-right:18px"></span>
-                                            <strong>Tarjeta de crédito o débito (Stripe)</strong>
+                                            <strong>Targeta de crédito o débito (Stripe)</strong>
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
@@ -188,16 +135,15 @@ $session = \Stripe\Checkout\Session::create([
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                             <span class="iconify" data-icon="logos:paypal" data-width="32"
                                                 style="margin-right:18px"></span>
                                             <strong>PayPal</strong>
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <form
                                                 action="{{ route('complete.order', ['id' => $viewData['orders']->getId()]) }}"
